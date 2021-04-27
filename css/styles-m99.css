@@ -162,41 +162,52 @@ header {
         margin-right: 2%;
     }
 }
-
-.nav--recits picture {
-    position: absolute;
-    top: 200px;
-    opacity: 0.25;
-    z-index: -1;
+@media (min-width: 600px) {
+    .nav--recits picture {
+        position: absolute;
+        top: 200px;
+        opacity: 0.25;
+        z-index: -1;
+    }
 }
-
 @media (min-width: 600px) {
     .nav--recits picture {
         position: static;
         opacity: 0.85;
     }
 }
-
-.v2 .nav--recits__rose {
-    position: absolute;
-    top: 0;
-    opacity: 0.5;
-    width: 400px;
-    z-index: -1;
+@media (min-width: 600px) {
+    .v2 .nav--recits__rose {
+        position: absolute;
+        /*top: 70px;*/
+        top: 0px;
+        opacity: 0.5;
+        width: 400px;
+        z-index: -1;
+        transform:rotate(5deg);
+    }
 }
-
 .nav--recits .nav__link {
     color: #c8a78c;
     text-decoration: none;
-    display: block;
+    display: inline-block;
     padding-right: 4rem;
     margin-bottom: 1.5rem;
     font-size: 2.1rem;
-    min-width: 30rem;
-    text-align: right;
     line-height: 3rem;
 }
-
+@media (min-width: 600px) {
+    .nav--recits .nav__link {
+        display: block;
+        min-width: 30rem;
+        padding-right: 4rem;
+        color: #d06d46;
+        text-align: right;
+    }
+    .v2 .nav--recits .nav__link {
+        /*text-align: left;*/
+    }
+}
 .nav--recits .nav__link:hover {
     text-decoration: underline;
     color: #b22a2a; /* la dominante dans la main */
