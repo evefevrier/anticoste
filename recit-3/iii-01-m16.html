@@ -6,17 +6,17 @@
     <!-- Adapter le titre -->
     <title>Titre récit - Page X de XX - Anticoste - M00</title>
     <!-- Feuille de styles commune à tous -->
-    <link rel="stylesheet" href="../css/styles.css">
+    <!--<link rel="stylesheet" href="../css/styles-m99.css">-->
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m99 -->
-    <link rel="stylesheet" href="../css/styles-m99.css">
+    <link rel="stylesheet" href="../css/styles-m16.css">
 </head>
 <!-- sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 -->
-<body class="photo m99">
+<body class="photo m16">
 
 <!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
 <header role="banner">
-    <nav class="nav nav--menu" role="navigation">
+    <nav class="nav nav--menu nav--principal" role="navigation">
         <ul class="nav__list">
             <li class="nav__listItem">
                 <a class="nav__link"
@@ -29,9 +29,11 @@
                    href="../credits/m16.html">Crédits</a></li>
         </ul>
     </nav>
+    <h1 class="h1">Le cimetière du golf</h1>
 </header>
 <main class="conteneur rangee">
     <figure>
+
         <picture class="picture__tag">
             <source media="(max-width: 600px)"
                     srcset="images/iii-01-m16_600.jpg 1x, images/iii-01-m16_1200.jpg 2x"/>
@@ -39,9 +41,9 @@
                     srcset="images/iii-01-m16_1200.jpg 1x, images/iii-01-m16_2400.jpg 2x"/>
             <img src="images/iii-01-m16_1200.jpg" alt="">
         </picture>
-        <figcaption>
-            <h1 class="h4">Identification de la source</h1>
-            <p>Description de la source (ici picsum.photos/id/12/1200/800) </p>
+        <figcaption class="texte__infos">
+            <h4 class="h4">Récits de naufrages - 1829 - 1902, couverture du manuscrit de Placide Vigneau (1842-1926), gardien du phare de l’ïle aux Perroquets</h4>
+            <p>Anonyme, photographie, sans date, collection Bibliothèque et Archives Canada (no MIKAN 4118814)</p>
         </figcaption>
     </figure>
 </main>
@@ -57,7 +59,7 @@
                     <span class="screen-reader-only">Précédent</span></a>
             </li>
             <li class="nav__listItem">
-                <span class="pagination">Récit I - page 1 de 14</span>
+                <span class="pagination">Récit I - page 2 de 14</span>
             </li>
             <li class="nav__listItem">
                 <a class="nav__link switch"

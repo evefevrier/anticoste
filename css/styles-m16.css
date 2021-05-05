@@ -18,15 +18,208 @@
 
 /* Charte typographique
    ========================================================================== */
+/**
+ * Typographie responsive (Mobile First)
+   ========================================================================
+ * Les valeurs de taille de police suggérées ici sont à titre indicatif.
+ * À ajuster selon la direction visuelle et le choix de polices de caractères.
+ *
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIÈRES
+ * Polices
+ * Base décimale
+ * Hiérarchie responsive
+ *
+ *
+ * Doc des points de rupture :
+ * ==========================================================================
+ * Écran étroit : de 0 à 599px
+ * point de rupture: 600px
+ *
+ * Écran moyen : de 600 à 799px
+ * point de rupture: 800px
+ *
+ * Écran large : 800px et +
+ */
+
+/* Polices */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Rosario&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
+
+h1,
+.h1,
+h3,
+.h3,
+h4,
+.h4 {
+    font-family: 'Playfair Display', serif;
+}
+h2,
+.h2{
+    font-family: 'Spectral SC', serif;
+}
+body{
+    font-family: 'Playfair Display', serif;
+}
+.nav{
+    font-family: 'Spectral SC', serif;
+}
+.legende{
+    font-family: 'Rosario', sans-serif;
+}
+.pagination{
+    font-family: 'Rosario', sans-serif;
+}
+
+/* Base décimale */
+html{
+    font-size: 62.5%;
+}
+
+
+body {
+    /* 16px pour toutes les largeurs d'écran */
+    font-size: 1.6rem;
+    /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
+    line-height: 1.375;
+}
+@media (min-width: 600px) {
+    body {
+        line-height: 1.5;
+    }
+}
+@media (min-width: 800px) {
+    body {
+        line-height: 1.75;
+    }
+}
+
+
+/* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
+h1,
+.h1 {
+    font-size: 3rem;
+}
+@media (min-width: 600px) {
+    h1,
+    .h1 {
+        font-size: 8rem;
+        text-align: center;
+    }
+}
+@media (min-width: 800px) {
+    h1,
+    .h1 { /* = 48px */
+        font-size: 8rem;
+    }
+}
+h2,
+.h2 {
+    font-size: 1.7rem;
+}
+@media (min-width: 600px) {
+    h2,
+    .h2 {
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 800px) {
+    h2,
+    .h2 {
+        font-size: 2.5rem;
+    }
+}
+
+h3,
+.h3 { /* = 24px */
+    font-size: 2.1rem;
+}
+@media (min-width: 600px) {
+    h3,
+    .h3 { /* = 32px */
+        font-size: 5rem;
+    }
+}
+@media (min-width: 800px) {
+    h3,
+    .h3 { /* = 36px */
+        font-size: 5rem;
+    }
+}
+h4,
+.h4{
+    font-size: 2rem;
+}
+
+.legende{
+    font-size: 1.5rem;
+}
+@media (min-width: 600px){
+    .legende{
+        font-size: 2rem;
+    }
+}
+/*
+
+
+h4,
+.h4 { !* = 16px *!
+    font-size: 1.6rem;
+}
+@media (min-width: 600px) {
+    h4,
+    .h4 { !* = 18px *!
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 800px) {
+    h4,
+    .h4 { !* = 22px *!
+        font-size: 2.2rem;
+    }
+}*/
 
 
 /* Styles de base
    ========================================================================== */
-
-
+.pagination{
+    display: block;
+    justify-content: center;
+}
+.video__tag,
+img{
+    max-width: 100%;
+}
+.figcaption{
+    display: block;
+    background-color: #11509A;
+}
 /* Navigations
    ========================================================================== */
+nav--principal{
+    height: 50px;
+}
+.nav__list{
+    margin-top: 0px;
+    background-color: #BF6666;
+    padding-top: 10px;
+    display: flex;
+    list-style: none;
+    text-align: right;
+    margin-bottom: 0px;
 
+}
+.nav__listItem{
+    padding-right: 20px;
+
+}
+.nav__link{
+    text-decoration: none;
+    color: #11509A;
+}
 
 /* Grille de mise en page
    ========================================================================== */
@@ -36,6 +229,21 @@
 
 /* Niveau 1 - Rose des vents
    ====================== */
+.rose-des-vents {
+    background-image: url("../recit-3/images/fondRose-m16_600.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 600px) {
+    .rose-des-vents {
+        background-image: url("../recit-3/images/fondRose-m16_1000.jpg");
+    }
+}
+.nav__list__rose{
+    list-style: none;
+}
+
 
 
 /* Niveau 1 - Crédits
@@ -44,7 +252,11 @@
 
 /* Niveau 2 - Gabarit page Titre
    ====================== */
-
+.conteneur{
+    display: block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
 
 /* Niveau 2 - Gabarit page Photo
    ====================== */
@@ -53,5 +265,59 @@
 /* Niveau 2 - Gabarit page Texte
    ====================== */
 
+.texte {
+    background-image: url("../recit-3/images/iii-txt-m16_600.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width: 600px) {
+    .texte {
+        background-image: url("../recit-3/images/iii-txt-m16_1000.jpg");
+    }
+}
+
+@media (min-width: 800px) {
+    .texte {
+        background-image: url("../recit-3/images/iii-txt-m16_2000.jpg");
+    }
+}
+
+.texte .rangee {
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.texte__contenu {
+    padding: 70px 2rem;
+    font-size: 1.8rem;
+}
+
+@media (min-width: 600px) {
+    .texte__contenu {
+        font-size: 2.1rem;
+    }
+}
+
+.texte__infos {
+    color: aliceblue;
+    background-color: #11509A;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+@media (min-width: 600px) {
+    .texte__infos {
+        color: transparent;
+        background-color: transparent;
+        cursor: help;
+    }
+
+    .texte__infos:hover {
+        color: black;
+        transition: color 0.5s;
+    }
+}
 
 

@@ -311,14 +311,14 @@ figure {
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte {
-    background-image: url("../demo-recit/images/i-txt-m99_600.jpg");
+    background-image: url("../demo-recit/images/i-txt-m99.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 @media (min-width: 600px) {
     .texte {
-        background-image: url("../demo-recit/images/i-txt-m99_1000.jpg");
+        background-image: url("../demo-recit/images/i-01-m99_2400.jpg");
     }
 }
 
