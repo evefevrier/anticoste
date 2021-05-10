@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
 /**
@@ -36,7 +43,12 @@ blockquote {
 /* Base mise en page
    ========================================================================== */
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     min-height: 100vh;
 }
@@ -74,8 +86,14 @@ header {
 
 /* navigations menu principal*/
 .nav--menu .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0;
 }
@@ -106,8 +124,12 @@ header {
 }
 
 .nav--menu .switch:hover {
+    -webkit-transform: scale(2.25);
+    -ms-transform: scale(2.25);
     transform: scale(2.25);
     text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 
@@ -117,6 +139,8 @@ header {
     border-top-left-radius: var(--m99-borderRadius);
     border-top-right-radius: var(--m99-borderRadius);
     /* tests et code du dégradé faits avec https://cssgradient.io/ */
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(236, 244, 248, 1)), color-stop(3%, rgba(157, 177, 194, 1)), color-stop(30%, rgba(67, 67, 67, 1)));
+    background: -o-linear-gradient(bottom, rgba(236, 244, 248, 1) 0%, rgba(157, 177, 194, 1) 3%, rgba(67, 67, 67, 1) 30%);
     background: linear-gradient(0deg, rgba(236, 244, 248, 1) 0%, rgba(157, 177, 194, 1) 3%, rgba(67, 67, 67, 1) 30%);
 }
 
@@ -131,7 +155,24 @@ header {
 /* Bouton Rose des Vents */
 #rose{
     width:50px;
+    -webkit-animation: pulse 3s infinite ease-in-out;
     animation: pulse 3s infinite ease-in-out;
+}
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
 }
 @keyframes pulse {
     from {
@@ -213,14 +254,25 @@ circle:hover,
 
 @media (min-width: 600px) {
     .nav--recits {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 }
 
 .nav--recits .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-left: 13%;
     min-height: 60vh;
@@ -255,6 +307,8 @@ circle:hover,
         opacity: 0.5;
         width: 400px;
         z-index: -1;
+        -webkit-transform:rotate(5deg);
+        -ms-transform:rotate(5deg);
         transform:rotate(5deg);
     }
 }
@@ -287,44 +341,67 @@ circle:hover,
     background-position: right;
     background-size: 3.5rem;
     background-repeat: no-repeat;
+    -webkit-transition: font-size 0.3s;
+    -o-transition: font-size 0.3s;
     transition: font-size 0.3s;
 }
 
 @media (min-width: 600px) {
 
     .v2 .nav--recits .nav__listItem:nth-child(1) .nav__link {
+        -webkit-transform: translate(-140px, 5px);
+        -ms-transform: translate(-140px, 5px);
         transform: translate(-140px, 5px);
     }
     .v2 .nav--recits .nav__listItem:nth-child(2) .nav__link {
+        -webkit-transform: translate(150px, -10px);
+        -ms-transform: translate(150px, -10px);
         transform: translate(150px, -10px);
     }
     .v2 .nav--recits .nav__listItem:nth-child(3) .nav__link {
+        -webkit-transform: translate(-250px, -10px);
+        -ms-transform: translate(-250px, -10px);
         transform: translate(-250px, -10px);
     }
     .v2 .nav--recits .nav__listItem:nth-child(4) .nav__link {
+        -webkit-transform: translate(220px, 0px);
+        -ms-transform: translate(220px, 0px);
         transform: translate(220px, 0px)
     }
     .v2 .nav--recits .nav__listItem:nth-child(5) .nav__link {
+        -webkit-transform: translate(-300px, 40px);
+        -ms-transform: translate(-300px, 40px);
         transform: translate(-300px, 40px)
     }
     .v2 .nav--recits .nav__listItem:nth-child(6) .nav__link {
+        -webkit-transform: translate(230px, 20px);
+        -ms-transform: translate(230px, 20px);
         transform: translate(230px, 20px)
     }
     .v2 .nav--recits .nav__listItem:nth-child(7) .nav__link {
+        -webkit-transform: translate(-210px, 50px);
+        -ms-transform: translate(-210px, 50px);
         transform: translate(-210px, 50px)
     }
 }
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
 .titre .rangee {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .titre h1 {
     font-size: 5vh;
     padding-top: 7rem;
+    -ms-flex-item-align: start;
     align-self: flex-start;
 }
 
@@ -332,6 +409,8 @@ circle:hover,
     .titre h1 {
         font-size: 10vh;
         padding: 0;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
     }
 }
@@ -377,6 +456,8 @@ figure {
 
     .photo figcaption:hover {
         opacity: 0.85;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s;
         cursor: help;
     }
@@ -403,7 +484,11 @@ figure {
 }
 
 .texte .rangee {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #000;
 }
@@ -437,6 +522,8 @@ figure {
 
     .texte__infos:hover {
         color: rgba(50, 50, 50, 0.75);
+        -webkit-transition: color 0.5s;
+        -o-transition: color 0.5s;
         transition: color 0.5s;
     }
 }
