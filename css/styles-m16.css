@@ -78,7 +78,11 @@ a:hover {
     font-size: var(--font-size-texte-contenu);
     color: var(--color-text1);
 }
+@media(min-width: 600px) {
+    .texte__infos {
+        font-size: 2rem;
 
+    }
 .recit-pagination {
     font-size: var(--font-size-recit-pagination);
     color: var(--color-text1);
@@ -500,11 +504,34 @@ li {
 
 /* Niveau 2 - Gabarit page Titre
    ====================== */
-
-
+.contenu_titre{
+    display: inline-block;
+}
+h1{
+    text-align: center;
+}
+.video__tag{
+    max-width: 95%;
+    margin: auto;
+}
 /* Niveau 2 - Gabarit pages Photo et texte
    ====================== */
+    .contenu-texte{
+        padding: 50px;
+    }
+    .texte-contenu{
+        padding-top: 60px;
+        padding-bottom: 20px;
+    }
 
+    img {
+        max-width: 70%;
+    }
+
+    .picture__tag {
+        margin: auto;
+    }
+}
 /* Background pages photo et texte */
 .main-img-txt {
     display: flex;
@@ -516,7 +543,7 @@ li {
 }
 
 .bg-img-txt {
-    background: url(/images/m20/vii-img-m20.jpg) no-repeat center center fixed;
+    background: url(../images/m20/vii-img-m20.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -542,11 +569,9 @@ li {
 }
 
 /*  Contenu */
-
 .contenu {
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto
     width: 100vh;
     height: 70vh;
     /* background-color: #FB8500; */
