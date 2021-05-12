@@ -23,6 +23,10 @@ h1 {
     font-family: Zapfino;
     color: #FFFAF3;
 }
+.titre-accueil {
+    color: black;
+    border-bottom: solid 3px black;
+}
 .h4 {
     color: black;
 }
@@ -104,6 +108,9 @@ header{
     text-decoration: underline;
     color: #B9D398;
 }
+svg:hover {
+    fill: #B9D398;
+}
 .nav--menu .switch:hover {
     transform: scale(2.25);
     text-decoration: none;
@@ -119,6 +126,63 @@ header{
     display: inline-block;
     margin:1rem;
 }
+/* Niveau 1 - Accueil
+   ================== */
+.accueil__contenu {
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+.main-accueil {
+    margin: 10rem 10rem 0 10rem;
+    color: black;
+}
+.h2-accueil, .h3-accueil {
+    text-align: center;
+}
+.h3-accueil {
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.accueil_rose-des-vents {
+    text-decoration: none;
+    color: #657453;
+}
+.accueil_rose-des-vents:hover {
+    text-decoration: underline;
+    color: #B9D398;
+    font-size: 2rem;
+    transition: font-size 0.5s;
+}
+.pied-de-page {
+    color: #FFFAF3;
+    background-color: #657453;
+    position: relative;
+    border-bottom: none;
+    padding: 5rem 3rem;
+    text-align: center;
+}
+/* Niveau 1 - Crédits
+   ================== */
+.h1-credits {
+    color: black;
+    border-bottom: solid 3px black;
+}
+.h2-credits {
+    text-align: center;
+}
+.main-credits {
+    margin: 10rem 10rem 0 10rem;
+    color: black;
+    padding-bottom: 5rem;
+}
+a {
+    color: #657453;
+}
+a:hover {
+    color: #B9D398;
+    transition: color 0.5s;
+}
+
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
@@ -249,7 +313,7 @@ figure{
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte{
-    background-image: url("../demo-recit/images/i-txt-m19.jpg");
+    background-image: url("../demo-recit/images/i-txt-m99.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
