@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
 /**
@@ -48,7 +55,12 @@ blockquote{
    ========================================================================== */
 body{
     background-color: #FFFAF3;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-flow:column wrap;
     flex-flow:column wrap;
     min-height: 100vh;
 }
@@ -83,7 +95,11 @@ header{
 .nav--menu .nav__list {
     color: #657453;
     border-bottom: solid 2px #657453;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin:0;
 }
@@ -93,6 +109,8 @@ header{
     font-weight: bold;
     display: inline-block;
     margin: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 1rem;
     text-decoration: none;
@@ -107,6 +125,8 @@ header{
     }
 }
 .nav--menu .nav__link:hover {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     text-decoration: underline;
     color: #B9D398;
@@ -118,12 +138,18 @@ header{
 }
 
 .compass:hover {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     fill: #B9D398;
 }
 .nav--menu .switch:hover {
+    -webkit-transform: scale(2.25);
+    -ms-transform: scale(2.25);
     transform: scale(2.25);
     text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 .nav--menu .nav__link--active {
@@ -161,6 +187,8 @@ header{
     text-decoration: underline;
     color: #B9D398;
     font-size: 2rem;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 .pied-de-page {
@@ -183,6 +211,8 @@ header{
         margin: 10rem 25rem 10rem 25rem;
     }
     .optionnel-mobile{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 }
@@ -209,6 +239,8 @@ a {
 }
 a:hover {
     color: #B9D398;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
     transition: color 0.5s;
 }
 @media (min-width: 600px) {
@@ -240,13 +272,24 @@ a:hover {
 }
 @media (min-width: 600px) {
     .nav--recits {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 }
 .nav--recits .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-left: 13%;
     min-height: 60vh;
@@ -299,14 +342,22 @@ a:hover {
     background-position: right;
     background-size: 3rem;
     background-repeat: no-repeat;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
 .titre .rangee{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .titre h1{
@@ -353,6 +404,8 @@ figure{
     }
     .photo figcaption:hover {
         opacity:0.85;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s;
         cursor: help;
     }
@@ -366,7 +419,11 @@ figure{
     background-size: cover;
 }
 .texte .rangee{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color:#000;
 }
@@ -396,6 +453,8 @@ blockquote{
     }
     .texte__infos:hover{
         color: black;
+        -webkit-transition:color 0.5s;
+        -o-transition:color 0.5s;
         transition:color 0.5s;
     }
 }
