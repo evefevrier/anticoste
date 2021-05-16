@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
 /**
@@ -48,7 +55,12 @@ blockquote{
    ========================================================================== */
 body{
     background-color: #FFFAF3;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+    -ms-flex-flow:column wrap;
     flex-flow:column wrap;
     min-height: 100vh;
 }
@@ -83,7 +95,11 @@ header{
 .nav--menu .nav__list {
     color: #657453;
     border-bottom: solid 2px #657453;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin:0;
 }
@@ -92,10 +108,15 @@ header{
     color: #657453;
     font-weight: bold;
     display: inline-block;
-    padding: 1rem 1rem;
+    margin: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1rem;
     text-decoration: none;
     font-size: 1.4rem;
     border-bottom: 5px solid transparent;
+
 }
 @media (min-width: 600px) {
     .nav--menu .nav__link {
@@ -104,16 +125,31 @@ header{
     }
 }
 .nav--menu .nav__link:hover {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     text-decoration: underline;
     color: #B9D398;
 }
-svg:hover {
+.compass {
+    fill: #657453;
+    width: 40px;
+    height: 40px;
+}
+
+.compass:hover {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
     fill: #B9D398;
 }
 .nav--menu .switch:hover {
+    -webkit-transform: scale(2.25);
+    -ms-transform: scale(2.25);
     transform: scale(2.25);
     text-decoration: none;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
     transition: all 0.3s;
 }
 .nav--menu .nav__link--active {
@@ -133,7 +169,7 @@ svg:hover {
     margin-right: 7rem;
 }
 .main-accueil {
-    margin: 10rem 10rem 0 10rem;
+    margin: 6rem 1rem 6rem 1rem;
     color: black;
 }
 .h2-accueil, .h3-accueil {
@@ -151,6 +187,8 @@ svg:hover {
     text-decoration: underline;
     color: #B9D398;
     font-size: 2rem;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 .pied-de-page {
@@ -161,26 +199,60 @@ svg:hover {
     padding: 5rem 3rem;
     text-align: center;
 }
+.optionnel-mobile{
+    display: none;
+}
+.images-accueil{
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 600px) {
+    .main-accueil {
+        margin: 10rem 25rem 10rem 25rem;
+    }
+    .optionnel-mobile{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
 /* Niveau 1 - Crédits
    ================== */
 .h1-credits {
     color: black;
     border-bottom: solid 3px black;
+    font-size: 1.2em;
 }
 .h2-credits {
     text-align: center;
 }
 .main-credits {
-    margin: 10rem 10rem 0 10rem;
+    margin: 10rem 1rem 0 1rem;
     color: black;
     padding-bottom: 5rem;
+}
+.logo_fondRecherche{
+    width: 20rem;
 }
 a {
     color: #657453;
 }
 a:hover {
     color: #B9D398;
+    -webkit-transition: color 0.5s;
+    -o-transition: color 0.5s;
     transition: color 0.5s;
+}
+@media (min-width: 600px) {
+    .main-credits {
+        margin: 10rem 25rem 10rem 25rem;
+    }
+    .logo_fondRecherche{
+        width: 30rem;
+    }
+    .h1-credits{
+        font-size: 2.4em;
+    }
 }
 
 /* Niveau 1 - Rose des vents
@@ -188,6 +260,7 @@ a:hover {
 .rose-des-vents {
     background-image: url("../images/m19/cartev2_noir-blanc.jpg");
     background-size: cover;
+    padding-top: 5rem;
 }
 .rose-des-vents .conteneur{
     padding-top:70px;
@@ -199,13 +272,24 @@ a:hover {
 }
 @media (min-width: 600px) {
     .nav--recits {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 }
 .nav--recits .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-left: 13%;
     min-height: 60vh;
@@ -220,14 +304,14 @@ a:hover {
 
 .nav--recits picture {
     position: absolute;
-    top: 200px;
-    opacity: 0.25;
+    top: 40px;
+    opacity: 0.15;
 }
 
 @media (min-width: 600px) {
     .nav--recits picture {
         position: static;
-        opacity: 0.85;
+        opacity: 0.65;
     }
 }
 
@@ -239,8 +323,15 @@ a:hover {
     margin-bottom: 1.5rem;
     font-size: 2.1rem;
     min-width: 30rem;
-    text-align: right;
-    line-height: 3rem;
+    text-align: center;
+    line-height: 5rem;
+}
+
+@media (min-width: 600px) {
+    .nav--recits .nav__link {
+        text-align: right;
+        line-height: 3rem;
+    }
 }
 
 .nav--recits .nav__link:hover {
@@ -251,14 +342,22 @@ a:hover {
     background-position: right;
     background-size: 3rem;
     background-repeat: no-repeat;
+    -webkit-transition: font-size 0.5s;
+    -o-transition: font-size 0.5s;
     transition: font-size 0.5s;
 }
 
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
 .titre .rangee{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .titre h1{
@@ -293,7 +392,7 @@ figure{
 }
 .photo figcaption {
     color: black;
-    background-color: whitesmoke;
+    background-color: #FFFAF3;
     padding: 2rem;
 }
 @media (min-width: 600px) {
@@ -305,6 +404,8 @@ figure{
     }
     .photo figcaption:hover {
         opacity:0.85;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s;
         cursor: help;
     }
@@ -313,12 +414,16 @@ figure{
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte{
-    background-image: url("../demo-recit/images/i-txt-m99.jpg");
+    background-image: url("../recit-6/images/vi-txt-m25.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 .texte .rangee{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color:#000;
 }
@@ -326,14 +431,17 @@ figure{
     padding: 70px 2rem;
     font-size:1.8rem;
 }
+blockquote{
+    text-shadow: 2px 2px 5px darkgray;
+}
 @media (min-width: 600px) {
     .texte__contenu{
         font-size:2.1rem;
     }
 }
 .texte__infos{
-    color: aliceblue;
-    background-color: #434343;
+    color: #FFFAF3;
+    background-color: #657453;
     font-size: 1.6rem;
     padding: 1rem;
 }
@@ -345,6 +453,8 @@ figure{
     }
     .texte__infos:hover{
         color: black;
+        -webkit-transition:color 0.5s;
+        -o-transition:color 0.5s;
         transition:color 0.5s;
     }
 }
