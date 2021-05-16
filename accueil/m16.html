@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accueil - Anticoste - m20</title>
+    <title>Accueil - Anticoste - m16</title>
     <!-- Feuille de styles commune à tous -->
 
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m20 -->
-    <link rel="stylesheet" href="../css/styles-m20.css">
+    <link rel="stylesheet" href="../css/styles-m16.css">
 </head>
 <!-- Ajuster le nom de classe m20 pour correspondre à votre mandat m01 à m13 -->
 
@@ -71,12 +71,12 @@
 <main class="">
     <section class="section1 grid-accueil">
         <!-- paragraphe intro -->
-        <p class="grid-a p">Perçue à la fois comme une <b>« terre maudite »</b> en raison des nombreux naufrages qui
-            s’y sont déroulés dans le passé et un <b>« paradis »</b> pour la grande nature qu’elle incarne, l’Île
+        <p class="grid-a p">Perçue à la fois comme une <strong class="strong">« terre maudite »</strong> en raison des nombreux naufrages qui
+            s’y sont déroulés dans le passé et un <strong class="strong">« paradis »</strong> pour la grande nature qu’elle incarne, l’Île
             d’Anticosti n’a cessé de fasciner notre imaginaire collectif. </p>
         <!-- Bouton cta -->
         <button class="grid-b btn">
-            Lancer l'exposition
+            Découvrir les récits
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                         d="M16.4084 7.59178L5.66671 2.15011C5.25518 1.91635 4.79 1.79346 4.31671 1.79346C3.84342 1.79346 3.37824 1.91635 2.96671 2.15011C2.56439 2.42437 2.24158 2.79995 2.03088 3.23891C1.82018 3.67787 1.72905 4.16466 1.76671 4.65011V15.4668C1.73076 15.952 1.82264 16.4382 2.0332 16.8769C2.24375 17.3155 2.56562 17.6913 2.96671 17.9668C3.33863 18.1909 3.76587 18.3064 4.20004 18.3001C4.71151 18.2914 5.21382 18.1629 5.66671 17.9251L16.4084 12.5001C18 11.6668 18.2334 10.6334 18.2334 10.0668C18.2334 9.50011 18 8.40011 16.4084 7.59178ZM15.65 10.9751L4.91671 16.4168C4.75842 16.5216 4.57665 16.5855 4.38762 16.603C4.19859 16.6204 4.00818 16.5908 3.83338 16.5168C3.6855 16.3882 3.57163 16.225 3.50186 16.0419C3.43208 15.8587 3.40856 15.6612 3.43338 15.4668V4.58344C3.40856 4.38903 3.43208 4.19149 3.50186 4.00834C3.57163 3.82519 3.6855 3.66207 3.83338 3.53344C3.93547 3.47646 4.04983 3.44501 4.16671 3.44178C4.4179 3.45182 4.66329 3.5203 4.88338 3.64178L15.65 9.08345C16.2167 9.36678 16.5667 9.73345 16.5667 10.0251C16.5667 10.3168 16.2167 10.6834 15.65 10.9751Z"
@@ -92,10 +92,13 @@
             </svg>
         </div>
         <!-- image accueil 1 -->
-        <picture class="grid-d"></picture>
+        <picture class="grid-d">
+            <source media="(min-width:600px)" srcset="/images/m20/vii-accueil-1_1200.jpg">
+            <source media="(max-width:599px)" srcset="/images/m20/vii-accueil-1_1200.jpg">
+            <img src="/images/m20/vii-accueil-1_1200.jpg" alt=""></picture>
         <!-- texte accueil 1 -->
         <div class="grid-e">
-            <p class="p"><b>L’exposition Anticoste</b> propose une série de regards où divers points de vue sur
+            <p class="p"><strong class="strong">L’exposition Anticoste</strong> propose une série de regards où divers points de vue sur
                 l’Île et son histoire se croisent et se confrontent dans une série de récits de l’entre-deux.
             </p>
             <p class="p">Issus des pages racornies, des images perdues, des pierres abandonnées et de toutes ces
@@ -104,7 +107,11 @@
             </p>
         </div>
         <!-- image accueil 2 -->
-        <picture class="grid-f"></picture>
+        <picture class="grid-f">
+            <source media="(min-width:600px)" srcset="/images/m20/vii-accueil-2_1200.jpg">
+            <source media="(max-width:599px)" srcset="/images/m20/vii-accueil-2_1200.jpg">
+            <img src="/images/m20/vii-accueil-2_1200.jpg" alt="">
+        </picture>
         <!-- texte accueil 2 -->
         <div class="grid-g">
             <h2 class="h2">Sept récits numériques</h2>
