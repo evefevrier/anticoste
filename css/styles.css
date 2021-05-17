@@ -3,106 +3,55 @@
  * @author Prenom Nom <courriel>
  *
  * TABLE DES MATIERES
+ * Reset / Normalize
+ * Utilitaires
  * Charte typographique
  * Styles de base
+ * Système de grille fluide
+ * Navigations
  * Grille de mise en page
- * Navigations de l'interface (bandeau + pied)
  *** Niveau 1 - Accueil
  *** Niveau 1 - Rose des vents
- ****** navigation vers les récits
  *** Niveau 1 - Crédits
  *** Niveau 2 - Gabarit page Titre
  *** Niveau 2 - Gabarit page Photo
  *** Niveau 2 - Gabarit page Texte
  */
-
+/* Reset
+   ========================================================================== */
+@import "normalize.css";
+/* Utilitaires
+   ========================================================================== */
+@import "utilitaires.css";
 /* Charte typographique
    ========================================================================== */
-h1 {
-    font-family: Zapfino;
-    color: #FFFAF3;
-}
-.h4 {
-    color: black;
-}
-.pagination{
-    font-family: Zapfino;
-}
+@import "typo.css";
+/* Système de grille fluide
+   ========================================================================== */
+@import "grille.css";
 
 /* Styles de base
    ========================================================================== */
-body{
-    color: aliceblue;background-color: #FFFAF3;
-}
-blockquote{
-    margin:0;
-}
+
+/* Navigations
+   ========================================================================== */
+
 /* Grille de mise en page
    ========================================================================== */
-body{
-    background-color: #FFFAF3;
-    display: flex;
-    flex-flow:column wrap;
-    min-height: 100vh;}
-main.conteneur{
-    min-height: 80vh;
-    min-width: 375px;
-}
-header,
-footer {
-    color: aliceblue;background-color: #FFFAF3;
-    position: fixed;
-    width: 100%;
-    z-index: 5;}
-footer {
-    bottom: 0;
-}
-header{
-    top: 0;
-}
-/* Navigations de l'interface (bandeau + pied)
-   ========================================================================== */
-/* commun aux différentes navigations - balises nav>ul.nav__list */
-.nav__list {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 0;
-}
+/* Niveau 1 - Accueil
+   ====================== */
 
-/* navigations menu principal*/
-.nav--menu .nav__list {
-    color: #657453;
-    border-bottom: solid 2px #657453;
-    display: flex;
-    justify-content: center;
-    margin:0;
-}
+/* Niveau 1 - Rose des vents
+   ====================== */
 
-.nav--menu .nav__link {color: #657453;
-    font-weight: bold;
-    display: inline-block;
-    padding: 1rem 1rem;
-    text-decoration: none;font-size: 1.4rem;
-    border-bottom: 5px solid transparent;
-}
-@media (min-width: 600px) {
-    .nav--menu .nav__link {
-        font-size: 1.6rem;
-        margin: 0 2rem;
-    }
-}
-.nav--menu .nav__link:hover {
-    transition: 0.5s;
-    text-decoration: underline;
-    color: #B9D398;
-}
-.nav--menu .switch:hover {
-    transform: scale(2.25);
-    text-decoration: none;
-    transition: all 0.3s;
-}
-.nav--menu .nav__link--active {color:#B9D398;
-    background: #657453;
-    /* tests et code du dégradé faits avec https://cssgradient.io/ */*background-color: #434343;*/
-}
-.pagination{
+/* Niveau 1 - Crédits
+   ====================== */
+
+/* Niveau 2 - Gabarit page Titre
+   ====================== */
+
+/* Niveau 2 - Gabarit page Photo
+   ====================== */
+
+/* Niveau 2 - Gabarit page Texte
+   ====================== */

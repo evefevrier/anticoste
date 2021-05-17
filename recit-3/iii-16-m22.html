@@ -9,22 +9,38 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m99 -->
-    <link rel="stylesheet" href="../css/styles-m99.css">
+    <link rel="stylesheet" href="../css/styles-m22.css">
 </head>
 <!-- sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 -->
 <body class="photo m99">
 
 <!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
+<header role="banner">
+    <nav class="nav nav--menu" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../accueil/m22.html">Anticoste</a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../rose-des-vents/m22.html">Rose&#8239;des&#8239;vents</a></li>
+            <li class="nav__listItem">
+                <a class="nav__link"
+                   href="../credits/m22.html">Crédits</a></li>
+        </ul>
+    </nav>
+</header>
 
 <main class="conteneur rangee">
     <figure>
         <picture class="picture__tag">
-            <source srcset="https://picsum.photos/id/12/1200/800"/>
-            <img src="https://picsum.photos/id/12/1200/800" alt="">
+            <source media="(max-width: 600px)" srcset="images/iii-16-m22_1200.jpg">
+            <source media="(min-width: 601px)" srcset="images/iii-16-m22_2400.jpg">
+            <img alt="" class="picture__img" src="images/iii-16-m22_2400.jpg">
         </picture>
         <figcaption>
-            <h1 class="h4">Identification de la source</h1>
-            <p>Description de la source (ici picsum.photos/id/12/1200/800) </p>
+            <h2 class="h4">Épave du Calou, Pointe Ouest </h2>
+            <p> Photo Richard Baillargeon, 2004 </p>
         </figcaption>
     </figure>
 </main>
@@ -50,6 +66,7 @@
             </li>
         </ul>
     </nav>
+    <h1>Cimetière du golf</h1>
 </footer>
 
 </body>

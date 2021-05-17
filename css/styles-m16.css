@@ -23,120 +23,13 @@
  ******* Contenu
  */
 
-/* Typographie
-   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-/*  Setup typo */
-.h1 {
-    font-size: var(--font-size-h1);
-    color: var(--color-text1);
-}
-
-.h2 {
-    font-size: var(--font-size-h2);
-    color: var(--color-text3);
-}
-
-.h3 {
-    font-size: var(--font-size-h3);
-    color: var(--color-text1);
-}
-
-strong {
-    font-weight: bold;
-}
-
-.p,
-strong {
-    font-size: var(--font-size-p);
-    color: var(--color-text1);
-}
-
-a {
-    text-decoration: none;
-    color: var(--color-text1);
-    font-size: var(--font-size-p);
-}
-
-a:hover {
-    text-decoration: none;
-    color: var(--color-text1);
-    text-decoration: underline;
-    text-decoration-color: var(--color-text3);
-
-}
-
-.logo {
-    font-size: var(--font-size-logo);
-    font-weight: bold;
-    color: var(--color-text1);
-    margin: 0;
-}
-
-.texte-contenu {
-    font-size: var(--font-size-texte-contenu);
-    color: var(--color-text1);
-}
-@media(min-width: 600px) {
-    .texte__infos {
-        font-size: 2rem;
-
-    }
-.recit-pagination {
-    font-size: var(--font-size-recit-pagination);
-    color: var(--color-text1);
-    margin: 0;
-    margin-top: .5em;
-}
-
-.pages-pagination {
-    font-size: var(--font-size-pages-pagination);
-    color: var(--color-text2);
-    margin: 0;
-}
-
-.txt-center {
-    text-align: center;
-}
-
-p {
-    margin: 3em 0;
-}
-
-@media (min-width: 600px) {
-    p {
-        margin: 0;
-    }
-    .logo {
-        margin: 0;
-    }
-}
-
-/* Styles de base,  basic reset  & reset normalize
-   ========================================================================== */
-/* @import "normalize.css"; */
-/* @import "utilitaires.css"; */
-
-* {
-    padding: 0;
-    margin: 0;
-    font-size: 62.5%;
-    font-weight: 400;
-    line-height: 150%;
-    font-family: var(--font-family1);
-}
-
-/* Grille de mise en page
-   ========================================================================== */
-/* @import "grille.css"; */
-
 
 /* Variables  & Font sizes, family, weight, line-height, etc.   !!!!!! MOBILE FIRST !!!!!!
    ========================================================================== */
 :root {
     /*  Colors */
-    --color-main: #0F242F;
+    --color-main: #0f242f;
     /* bleu foncé*/
     --color-secondary1: #FFB703;
     /* Jaune éléments intéractifs*/
@@ -155,13 +48,15 @@ p {
     /*  MOBILE */
 
     /*  Font sizes mobile*/
-    --font-size-logo: 4.5rem;
+    --font-size-logo: 3rem;
 
     --font-size-h1: 3rem;
     --font-size-h2: 2rem;
     --font-size-h3: 1.8rem;
+    --font-size-h3-credits: 2.4rem;
 
-    --font-size-p: 1.6rem;
+    --font-size-p: 1.4rem;
+    --font-size-p-credits: 1.5rem;
 
     --font-size-texte-contenu: 1.6rem;
     --font-size-recit-pagination: 1.6rem;
@@ -194,8 +89,10 @@ p {
         --font-size-h1: 3.5rem;
         --font-size-h2: 2.4rem;
         --font-size-h3: 2rem;
+        --font-size-h3-credits: 2.2rem;
 
         --font-size-p: 2.4rem;
+        --font-size-p-credits: 2rem;
 
         --font-size-texte-contenu: 2.4rem;
         --font-size-recit-pagination: 2.4rem;
@@ -203,14 +100,147 @@ p {
 
         --font-size-nav-footer: 2.8rem;
         --font-size-nav-footer-actif: 3.6rem;
+    }
+}
+/* Typographie
+   ========================================================================== */
 
+/*  Setup typo */
+.h1 {
+    font-size: var(--font-size-h1);
+    color: var(--color-text1);
+}
+
+.h2 {
+    font-size: var(--font-size-h2);
+    color: var(--color-text3);
+}
+.h2-credits {
+    font-size: var(--font-size-h2);
+    color: var(--color-text1);
+}
+
+.h3 {
+    font-size: var(--font-size-h3);
+    color: var(--color-text1);
+}
+.h3-credits{
+    color: var(--color-text1);
+}
+strong {
+    font-weight: bold;
+}
+
+.p,
+.strong {
+    font-size: var(--font-size-p);
+    color: var(--color-text1);
+}
+
+.p-credits{
+    color:var(--color-text1);
+    font-size: var(--font-size-p-credits);
+}
+@media(min-width: 600px){
+    .p-credits{
+        color:var(--color-text1);
+        font-size: var(--font-size-p-credits);
+    }
+}
+.p-accent{
+    font-size: var(--font-size-p);
+color: var(--color-text3);
+
+}
+a {
+    text-decoration: none;
+    color: var(--color-text1);
+    font-size: var(--font-size-p);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--color-text1);
+    text-decoration: underline;
+    text-decoration-color: var(--color-text3);
+
+}
+
+.logo {
+    font-size: var(--font-size-logo);
+    font-weight: bold;
+    color: var(--color-text1);
+    margin: 0;
+}
+
+.texte-contenu {
+    font-size: var(--font-size-texte-contenu);
+    color: var(--color-text1);
+}
+@media(min-width: 600px) {
+    .texte__infos {
+        font-size: 2rem;
 
     }
+}
+.recit-pagination {
+    font-size: var(--font-size-recit-pagination);
+    color: var(--color-text1);
+    margin: 0;
+    margin-top: .5em;
+}
 
-    body {
+.pages-pagination {
+    font-size: var(--font-size-pages-pagination);
+    color: var(--color-text2);
+    margin: 0;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+p {
+    margin: 3em 0;
+}
+@media(max-width: 599px) {
+    .logo {
+        text-align: center;
+    }
+}
+@media (min-width: 600px) {
+    p {
+        margin: 0;
+    }
+    .logo {
         margin: 0;
     }
 }
+
+/* Styles de base,  basic reset  & reset normalize
+   ========================================================================== */
+/* @import "normalize.css"; */
+/* @import "utilitaires.css"; */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: var(--font-family1);
+}
+
+/* Grille de mise en page
+   ========================================================================== */
+/* @import "grille.css"; */
+
+
+    body {
+        margin: 0;
+
+    }
+
 
 
 /* Utilitaires + navigation entete */
@@ -232,11 +262,12 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+
 }
 .nav--footer {
     font-size: var(--font-size-nav-footer);
     color: var(--color-text1);
+    text-align: left;
 }
 .nav--link-actif {
     color: var(--color-text3);
@@ -248,7 +279,7 @@ nav {
     color: var(--color-text1);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
     nav {
         padding: 0;
     }
@@ -260,7 +291,7 @@ li {
 
 .footer-accueil {
     padding: 5em 5em 0 5em;
-    text-align: center;
+    text-align: left;
 
 }
 
@@ -277,7 +308,7 @@ li {
 
 
 
-@media (min-width: 1000px) {
+@media (min-width: 600px) {
     .footer-flex {
         display: flex;
         justify-content: space-between;
@@ -317,16 +348,17 @@ li {
     width: var(--width-elements);
     height: var(--height-elements);
 }
-
-.compass:hover {
-    fill: #FB8500;
+@media(max-width: 599px) {
+    .compass:hover {
+        width: var(--width-elements);
+        height: var(--height-elements);
+        fill: #FB8500;
+    }
 }
-
-
 /* Niveau 1 - Accueil
    ====================== */
 
-.bg-accueil {
+.bg-accueil{
     background: url(/images/m20/vii-header-m20.jpg) no-repeat scroll;
     background-position: top;
     background-size: 100vw;
@@ -374,8 +406,6 @@ li {
     .grid-c {
         display: block;
         grid-area: c;
-        margin-top: 5vh;
-        margin-bottom: 10vh;
         /* transform: translate(0%, -50%); */
 
     }
@@ -384,12 +414,20 @@ li {
         grid-area: d;
         margin-top: 10vh;
         margin-bottom: 10vh;
+        padding-left: 10em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .grid-e {
         grid-area: e;
         margin-top: 10vh;
         margin-bottom: 10vh;
+        padding-right: 10em;
+        justify-content: center;
+        align-items: center;
+
     }
 
     .grid-f {
@@ -406,7 +444,7 @@ li {
 
 }
 
-.accueil {
+.accueil{
     background-color: var(--color-main);
 }
 
@@ -425,7 +463,9 @@ li {
     margin: 0;
 }
 
-
+    img{
+        max-width: 100%;
+    }
 
 
 
@@ -465,17 +505,14 @@ li {
 /*  Bouton CTA "Lancer l'exposition" */
 
 .btn {
-    background: #FFB703;
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
+    background-color: #FFB703;
     border-radius: 28px;
     color: #132A35;
     font-size: var(--font-size-p);
-    background: #FFB703;
+    background-color: #FFB703;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     border: none;
-    width: fit-content;
     margin-top: 2em;
     align-self: center;
 }
@@ -501,11 +538,46 @@ li {
 /* Niveau 1 - Crédits
    ====================== */
 
+.h2-credits,
+.h3-credits{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.credits{
+    padding: 20px;
+}
+.h2-credits{
+    text-align: center;
+}
 
+.p-centre{
+    text-align: center;
+}
+@media(min-width: 600px) {
+
+    .h2-credits,
+    .h3-credits{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .credits{
+        padding: 30px;
+    }
+
+}
+    @media(min-width: 600px){
+        .grid{
+            column-count: 2;
+        }
+        .p-grid{
+            padding: 8px;
+        }
+    }
 /* Niveau 2 - Gabarit page Titre
    ====================== */
 .contenu_titre{
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 h1{
     text-align: center;
@@ -518,6 +590,8 @@ h1{
    ====================== */
     .contenu-texte{
         padding: 50px;
+        display: block;
+        text-align: center;
     }
     .texte-contenu{
         padding-top: 60px;
@@ -525,13 +599,14 @@ h1{
     }
 
     img {
-        max-width: 70%;
+        max-width: 80%;
     }
-
+figure{
+    text-align: center;
+}
     .picture__tag {
         margin: auto;
     }
-}
 /* Background pages photo et texte */
 .main-img-txt {
     display: flex;
@@ -571,11 +646,19 @@ h1{
 /*  Contenu */
 .contenu {
     max-width: 800px;
-    margin: auto
+    margin: auto;
     width: 100vh;
     height: 70vh;
     /* background-color: #FB8500; */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.bg-credits,
+.credits {
+    background: url(/images/m20/vii-header-m20.jpg) no-repeat scroll;
+    background-color: var(--color-main);
+    background-position: top;
+    background-size: 100vw;
 }
