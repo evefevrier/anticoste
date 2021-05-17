@@ -415,7 +415,13 @@ padding: 0 0 5vh 0;
 /* Niveau 1 - Rose des vents
    ====================== */
 
-
+.rose-des-vents {
+   background-image: url("../images/m020/Carte_1440.jpg");
+}
+.rose-des-vents .conteneur{
+   padding-top:70px;
+}
+}
 /* Niveau 1 - Crédits
    ====================== */
 
