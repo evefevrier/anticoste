@@ -212,127 +212,116 @@ circle:hover,
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
-    background-image: url("../images/m99/carte-navigation_1200.jpg");
+    background-image: url("../images/m22/iii-rosebg-m22_2x.png");
     background-size: cover;
 }
 
-.rose-des-vents.v2 {
-    background-image: url("../images/m99/cartev2.jpg");
-}
 
-.rose-des-vents .conteneur {
-    padding-top: 70px;
-}
 
 /* navigation vers les récits */
 .nav--recits {
-    font-family: var(--m99-fonte-principale);
-    font-weight: bold;
+    font-family: 'Cormorant Garamond';
+    font-weight: 700;
 }
 
-@media (min-width: 600px) {
-    .nav--recits {
-        display: flex;
-        justify-content: center;
-    }
+.nav--recits picture {
+    position: absolute;
+    width: 65%;
+    z-index: -1;
+    margin-top: 0;
 }
 
-.nav--recits .nav__list {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    padding-left: 13%;
-    min-height: 60vh;
-}
-
-@media (min-width: 600px) {
-    .nav--recits .nav__list {
-        min-height: auto;
-        padding-left: 0;
-        margin-right: 2%;
-    }
-}
-@media (min-width: 600px) {
-    .nav--recits picture {
-        position: absolute;
-        top: 200px;
-        opacity: 0.25;
-        z-index: -1;
-    }
-}
-@media (min-width: 600px) {
-    .nav--recits picture {
-        position: static;
-        opacity: 0.85;
-    }
-}
-@media (min-width: 600px) {
-    .v2 .nav--recits__rose {
-        position: absolute;
-        /*top: 70px;*/
-        top: 0px;
-        opacity: 0.5;
-        width: 400px;
-        z-index: -1;
-        transform:rotate(5deg);
-    }
-}
 .nav--recits .nav__link {
     color: #c8a78c;
     text-decoration: none;
-    display: inline-block;
-    padding-right: 4rem;
-    margin-bottom: 1.5rem;
-    font-size: 2.1rem;
-    line-height: 3rem;
+    font-size: 3.5rem;
+    line-height: 6.5rem;
+}
+
+.nav--recits .nav__list {
+    width: 55%;
+    margin-left: 45%;
+    margin-top: 15rem;
 }
 @media (min-width: 600px) {
     .nav--recits .nav__link {
-        display: block;
-        min-width: 30rem;
-        padding-right: 4rem;
-        color: #d06d46;
-        text-align: right;
-    }
-    .v2 .nav--recits .nav__link {
-        /*text-align: left;*/
+        color: #fff;
+        text-align: left;
     }
 }
 .nav--recits .nav__link:hover {
-    text-decoration: underline;
-    color: #b22a2a; /* la dominante dans la main */
-    font-size: 2.15rem;
-    background-image: url("../images/m99/main.png");
-    background-position: right;
-    background-size: 3.5rem;
+    color: #E2C52E;
+}
+
+.nav--recits .recit2, .nav--recits .recit7 {
+    margin-left: 10%;
+}
+.nav--recits .recit3, .nav--recits .recit6 {
+    margin-left: 20%;
+}
+.nav--recits .recit4, .nav--recits .recit5 {
+    margin-left: 25%;
+}
+
+
+/* Niveau 1 - Crédits
+   ========================================================================== */
+.credits main {
+    background-image: url("../images/m22/iii-credits-m22_2x.jpg");
     background-repeat: no-repeat;
-    transition: font-size 0.3s;
+    background-size: 150%;
+    background-position: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 2rem;
+    padding-left: 5rem;
 }
 
-@media (min-width: 600px) {
-
-    .v2 .nav--recits .nav__listItem:nth-child(1) .nav__link {
-        transform: translate(-140px, 5px);
-    }
-    .v2 .nav--recits .nav__listItem:nth-child(2) .nav__link {
-        transform: translate(150px, -10px);
-    }
-    .v2 .nav--recits .nav__listItem:nth-child(3) .nav__link {
-        transform: translate(-250px, -10px);
-    }
-    .v2 .nav--recits .nav__listItem:nth-child(4) .nav__link {
-        transform: translate(220px, 0px)
-    }
-    .v2 .nav--recits .nav__listItem:nth-child(5) .nav__link {
-        transform: translate(-300px, 40px)
-    }
-    .v2 .nav--recits .nav__listItem:nth-child(6) .nav__link {
-        transform: translate(230px, 20px)
-    }
-    .v2 .nav--recits .nav__listItem:nth-child(7) .nav__link {
-        transform: translate(-210px, 50px)
-    }
+.credits h1 {
+    justify-content: flex-start;
+    font-size: 4.8rem;
 }
+
+.credits h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 1.5rem;
+}
+
+.credits p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 2.2rem;
+}
+
+.credits ul li {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 2.2rem;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+.credits ul {
+    padding: 0;
+    margin: 0;
+}
+
+.credits .list_recits {
+    margin-top: 2rem;
+}
+
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
 .titre .rangee {
@@ -341,15 +330,19 @@ circle:hover,
     align-items: center;
 }
 
-
-.video__tag {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+.titre {
+    background-color: #fff;
 }
+
+.titre h1 {
+    color: #000;
+}
+
+.titre footer span {
+    color: #434343;
+}
+
+
 
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
@@ -418,9 +411,17 @@ figcaption p {
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
-    margin-top: 10%;
+    margin-top: 20%;
     justify-content: center;
     align-items: center;
+    padding: 0;
+}
+.texte__contenu blockquote p {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 40%;
+    margin-right: 5%;
+    margin-top: 15%;
+    font-size: 1.7rem;
 }
 
 @media (min-width: 600px) {
@@ -439,18 +440,7 @@ figcaption p {
     justify-content: center;
     align-items: center;
     color: #000;
-}
-
-.texte__contenu {
-    padding: 70px 2rem;
-    font-family: var(--m99-fonte-ancienne);
-    font-size: var(--m99-fontSize-recit-texte-small);
-}
-
-@media (min-width: 600px) {
-    .texte__contenu {
-        font-size: var(--m99-fontSize-recit-texte-large);
-    }
+    padding: 0;
 }
 
 .texte__infos {
@@ -458,6 +448,11 @@ figcaption p {
     background-color: rgba(136, 137, 136, 0.85);
     padding: 2rem;
     justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15%;
+    margin-bottom: 0;
 }
 
 .texte__infos h2 {
@@ -469,11 +464,14 @@ figcaption p {
     padding-bottom: 0;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 2rem;
 }
 .texte__infos p {
     color: #2D2D2D;
     margin-top: 0;
     margin-bottom: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 600px) {
