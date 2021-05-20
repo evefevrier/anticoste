@@ -72,7 +72,7 @@ footer {
 }
 
 header {
-    top: 3%;
+    margin-top: 3rem;
     background-color: rgba(48, 48, 48, 0.8);;
     position: fixed;
     width: 100%;
@@ -98,20 +98,17 @@ header {
     margin: 0;
 }
 .nav--menu{
-    font-size:var(--m99-fontSize-interface-small);
-    font-weight: 700;
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 0.085em;
+    line-height: 3.5rem;
 }
-@media (min-width: 600px) {
-    .nav--menu{
-        font-size:var(--m99-fontSize-interface-large);
-    }
-}
+
 .nav--menu .nav__link {
-    color: var(--m99-couleur-principale);
+    color: #fff;
     display: inline-block;
     padding: 1rem 2rem;
     text-decoration: none;
-    border-bottom: 5px solid transparent;
 }
 
 @media (min-width: 600px) {
@@ -121,22 +118,11 @@ header {
 }
 
 .nav--menu .nav__link:hover {
-    text-decoration: underline;
-}
-
-.nav--menu .switch:hover {
-    transform: scale(2.25);
-    text-decoration: none;
-    transition: all 0.3s;
+    color: #E2C52E;
 }
 
 .nav--menu .nav__link--active {
-    color:var(--m99-couleur-principale);
-    border-bottom: 5px solid var(--m99-couleur-principale);
-    border-top-left-radius: var(--m99-borderRadius);
-    border-top-right-radius: var(--m99-borderRadius);
-    /* tests et code du dégradé faits avec https://cssgradient.io/ */
-    background: linear-gradient(0deg, rgba(236, 244, 248, 1) 0%, rgba(157, 177, 194, 1) 3%, rgba(67, 67, 67, 1) 30%);
+    color: #E2C52E;
 }
 
 .pagination{
@@ -182,32 +168,127 @@ circle:hover,
     fill: #D4AC0D;
 }
 
-/* Bouton FullScreen */
-/* Styles pour le bouton "fullscreen"
-        /* icones: https://fontawesome.com/license */
-.fullscreen {
-    display: none;
+/* Niveau 1 - Accueil
+   ================== */
+.accueil  main {
+    margin-top: 20rem;
+    color: #fff;
 }
-@media(min-width: 600px){
-    .fullscreen {
-        display: inline-block;
-        margin: 0.75rem;
-        margin-left: auto;
-    }
-    .icon{
-        display: block;
-        width: 1em;
-        height: 1em;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    .icon--fullscreen{
-        background-image: url("../demo-recit/images/fullscreen.svg");
-    }
-    .icon--normalscreen{
-        background-image: url("../demo-recit/images/normalscreen.svg");
-    }
+
+.accueil main .anticoste {
+    /*width: 60%;*/
+    /*margin-left: 40%;*/
 }
+.accueil  .anticoste img {
+    margin-left: -25%;
+    float: left;
+    margin-right: 2rem;
+}
+
+.accueil .anticoste p {
+    width: 60%;
+    margin-left: 40%;
+    margin-top: 0;
+    color: #888988;
+}
+
+.accueil h1 {
+    width: 60%;
+    margin-left: 40%;
+    text-align: left;
+    justify-content: flex-start;
+    font-size: 9rem;
+    line-height: 9rem;
+}
+
+.accueil .h3 {
+    font-size: 13rem;
+    line-height: 7rem;
+    color: rgba(167, 147, 41, 0.2);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.accueil .terre-maudite {
+    margin-top: 7rem;
+    margin-left: -20%;
+}
+
+.accueil .paradis {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -20%;
+    margin-bottom: 7rem;
+}
+
+.accueil .sept-recits-numeriques {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.accueil .sept-recits-numeriques p {
+    color: #888988;
+}
+
+.accueil h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    line-height: 5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.accueil .sept-recits {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+}
+.accueil .mythiques {
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -13%;
+}
+
+.accueil .experience-immersive ul {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 4rem;
+    padding: 0;
+}
+
+.accueil .experience-immersive ul li {
+    /*float: right;*/
+    padding: 2rem;
+    padding-left: 0;
+    margin: 0;
+}
+
+.accueil footer {
+    background-color: #454545;
+    border-top: 5px solid #E2C52E;
+}
+
+.accueil footer nav {
+    margin-top: 3rem;
+    font-size: 1.7rem;
+}
+
+.accueil footer nav .nav__link {
+    color: #B6B6B6;
+}
+
+.accueil footer p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+
 
 /* Niveau 1 - Rose des vents
    ================== */
@@ -320,6 +401,11 @@ circle:hover,
 
 .credits .list_recits {
     margin-top: 2rem;
+}
+
+.credits .logo {
+    margin-left: 70%;
+    margin-top: -10%;
 }
 
 /* Niveau 2 - Gabarit page Titre
