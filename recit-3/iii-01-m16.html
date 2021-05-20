@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Adapter le titre -->
     <title>Cimetière du golf - Page 1 de 15 - Anticoste - m16</title>
     <!-- Feuille de styles commune à tous -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/styles-m16.css">
+    <!--    <link rel="stylesheet" href="../css/styles.css">-->
+    <!-- Ajuster le href pour pointer sur la feuille de styles
+    du mandat en changeant le suffixe m20 -->
+    <!--    <link rel="stylesheet" href="../css/styles-m16.css">-->
+    <link rel="stylesheet" href="../css/styles-m16.min.css">
 </head>
-
 <body class="bg-img-txt">
-
 <header role="banner">
     <nav role="navigation">
-        <a href="">
-            <p class="logo">Anticoste</p>
-        </a>
-        <ul>
-            <li><a href=""><svg class="compass" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <ul class="nav__principal">
+            <li>
+                <a href="../accueil/m16.html">
+                    <p class="logo">Anticoste</p>
+                </a>
+            </li>
+            <li><a href="../credits/m16.html"><svg class="compass" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                 <path
                         d="M3.86826 27.207L0.0764771 26.4575C2.50994 13.4058 13.4015 2.51265 26.4527 0.0775146L27.2028 3.86917C15.6615 6.02202 6.01957 15.6654 3.86826 27.207Z"
                         fill="" />
@@ -72,7 +74,6 @@
 
     <div class="contenu">
         <figure>
-
             <picture class="picture__tag">
                 <source media="(max-width: 600px)"
                         srcset="images/iii-01-m16_600.jpg 1x, images/iii-01-m16_1200.jpg 2x"/>
@@ -81,14 +82,13 @@
                 <img src="images/iii-01-m16_1200.jpg" alt="">
             </picture>
             <figcaption class="texte__infos">
-                <h4 class="h4">Récits de naufrages - 1829 - 1902, couverture du manuscrit de Placide Vigneau (1842-1926), gardien du phare de l’ïle aux Perroquets</h4>
+                <h1 class="h4">Récits de naufrages <time>- 1829 - 1902</time>, couverture du manuscrit de Placide Vigneau <time>(1842-1926)</time>, gardien du phare de l’ïle aux Perroquets</h1>
                 <p>Anonyme, photographie, sans date, collection Bibliothèque et Archives Canada (no MIKAN 4118814)</p>
             </figcaption>
         </figure>
     </div>
-
     <div class="arrow-right">
-        <a href="../recit-3/iii-04-m16.html">
+        <a href="../recit-3/iii-02-m16.html">
             <svg class="arrow" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0)">
                     <path
@@ -106,84 +106,7 @@
 </main>
 <footer role="contentinfo" class="footer-img-txt">
     <p class="recit-pagination">Cimetière du golf</p>
-    <p class="pages-pagination">Page 1 sur 17</p>
+    <p class="pages-pagination">Page 1 sur 15</p>
 </footer>
 </body>
-
 </html>
-
-<!--
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    &lt;!&ndash; Adapter le titre &ndash;&gt;
-    <title>Titre récit - Page X de XX - Anticoste - M00</title>
-    &lt;!&ndash; Feuille de styles commune à tous &ndash;&gt;
-    &lt;!&ndash;<link rel="stylesheet" href="../css/styles-m99.css">&ndash;&gt;
-    &lt;!&ndash; Ajuster le href pour pointer sur la feuille de styles
-    du mandat en changeant le suffixe m99 &ndash;&gt;
-    <link rel="stylesheet" href="../css/styles-m16.css">
-</head>
-&lt;!&ndash; sur <body>: classe photo + nom de classe pour correspondre à votre mandat m01 à m13 &ndash;&gt;
-<body class="photo m16">
-
-&lt;!&ndash; voir gabarit interface.html pour bandeau d'entête incluant menu principal&ndash;&gt;
-<header role="banner">
-    <nav class="nav nav&#45;&#45;menu nav&#45;&#45;principal" role="navigation">
-        <ul class="nav__list">
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../accueil/m16.html">Anticoste</a></li>
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../rose-des-vents/m16.html">Rose&#8239;des&#8239;vents</a></li>
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../credits/m16.html">Crédits</a></li>
-        </ul>
-    </nav>
-    <h1 class="h1">Le cimetière du golf</h1>
-</header>
-<main class="conteneur rangee">
-    <figure>
-
-        <picture class="picture__tag">
-            <source media="(max-width: 600px)"
-                    srcset="images/iii-01-m16_600.jpg 1x, images/iii-01-m16_1200.jpg 2x"/>
-            <source media="(min-width: 601px)"
-                    srcset="images/iii-01-m16_1200.jpg 1x, images/iii-01-m16_2400.jpg 2x"/>
-            <img src="images/iii-01-m16_1200.jpg" alt="">
-        </picture>
-        <figcaption class="texte__infos">
-            <h4 class="h4">Récits de naufrages - 1829 - 1902, couverture du manuscrit de Placide Vigneau (1842-1926), gardien du phare de l’ïle aux Perroquets</h4>
-            <p>Anonyme, photographie, sans date, collection Bibliothèque et Archives Canada (no MIKAN 4118814)</p>
-        </figcaption>
-    </figure>
-</main>
-
-&lt;!&ndash; voir gabarit interface.html pour pied de page incluant navigation et pagination &ndash;&gt;
-<footer role="contentinfo">
-    <nav class="nav nav__pagination nav&#45;&#45;menu" role="navigation">
-        <ul class="nav__list">
-            <li class="nav__listItem">
-                <a class="nav__link switch"
-                   href="../recit-3/index-m16.html">
-                    <span aria-hidden="true">&lt;</span>
-                    <span class="screen-reader-only">Précédent</span></a>
-            </li>
-            <li class="nav__listItem">
-                <span class="pagination">Récit I - page 2 de 14</span>
-            </li>
-            <li class="nav__listItem">
-                <a class="nav__link switch"
-                   href="../recit-3/iii-04-m16.html">
-                    <span class="screen-reader-only">Suivant</span>
-                    <span aria-hidden="true">&gt;</span></a>
-            </li>
-        </ul>
-    </nav>
-</footer>
-</body>
-</html>-->

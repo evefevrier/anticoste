@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Adapter le titre -->
-    <title>Cimetière du golf - Page 4 de 15 - Anticoste - m16</title>
+    <title>Cimetière du golf - Page 5 de 15 - Anticoste - m16</title>
     <!-- Feuille de styles commune à tous -->
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/styles-m16.css">
+    <!--    <link rel="stylesheet" href="../css/styles.css">-->
+    <!-- Ajuster le href pour pointer sur la feuille de styles
+    du mandat en changeant le suffixe m20 -->
+    <!--    <link rel="stylesheet" href="../css/styles-m16.css">-->
+    <link rel="stylesheet" href="../css/styles-m16.min.css">
 </head>
 
 <body class="texte m20 bg-img-txt">
 
 <header role="banner">
     <nav role="navigation">
-        <a href="">
-            <p class="logo">Anticoste</p>
-        </a>
-        <ul>
-            <li><a href=""><svg class="compass" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <ul class="nav__principal">
+            <li>
+                <a href="../accueil/m16.html">
+                    <p class="logo">Anticoste</p>
+                </a>
+            </li>
+            <li><a href="../credits/m16.html"><svg class="compass" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
                 <path
                         d="M3.86826 27.207L0.0764771 26.4575C2.50994 13.4058 13.4015 2.51265 26.4527 0.0775146L27.2028 3.86917C15.6615 6.02202 6.01957 15.6654 3.86826 27.207Z"
                         fill="" />
@@ -72,12 +77,12 @@
 
     <div class="contenu-texte">
         <blockquote>
-            <p class="texte-contenu">Dès sept heures du matin, le Napoléon III mouillait par le travers de la pointe ouest de l’Anticosti, et le vent de terre nous apportait le bruit de la canonnade par laquelle le gardien de phare, M. Malouin, saluait notre arrivée. Toutes les habitations du poste étaient pavoisées de drapeaux et de banderoles en signe de réjouissance…
-        </p>
+            <h1 class="texte-contenu">Point de gouvernail, point de force, un Vent affreux, une Pluye continuelle, une Mer en fureur, et dans son reflux ; que pouvions-nous espérer qu’une fin prochaine ?
+            </h1>
         </blockquote>
         <p class="texte__infos">
-            Faucher de Saint-Maurice. <cite>De tribord à d’abord, trois croisières dans le golfe Saint-Laurent,</cite> Montréal, Duvernay Frères et Dansereau, 1877, page 110
-        </p>
+            Emmanuel Crespel.Voiages du R. P. <cite>Emmanuel Crespel dans le Canada et son naufrage en revenant en France,</cite> Francfort, <time>1742</time>, Lettre troisième, page 40
+            </p>
     </div>
 
     <div class="arrow-right">
@@ -100,7 +105,7 @@
 </main>
 <footer role="contentinfo" class="footer-img-txt">
     <p class="recit-pagination">Cimetière du golf</p>
-    <p class="pages-pagination">Page 4 sur 17</p>
+    <p class="pages-pagination">Page 4 sur 15</p>
 </footer>
 
 
@@ -108,72 +113,4 @@
 </body>
 
 </html>
-<!--
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    &lt;!&ndash; Adapter le titre &ndash;&gt;
-    <title>Titre récit - Page X de XX - Anticoste - M00</title>
-    &lt;!&ndash; Feuille de styles commune à tous &ndash;&gt;
-    <link rel="stylesheet" href="../css/styles.css">
-    &lt;!&ndash; Ajuster le href pour pointer sur la feuille de styles
-    du mandat en changeant le suffixe m99 &ndash;&gt;
-    <link rel="stylesheet" href="../css/styles-m16.css">
-</head>
-&lt;!&ndash; sur <body>: classe texte + nom de classe pour correspondre à votre mandat m01 à m13 &ndash;&gt;
-<body class="texte m16">
 
-&lt;!&ndash; voir gabarit interface.html pour bandeau d'entête incluant menu principal&ndash;&gt;
-<header role="banner">
-    <nav class="nav nav&#45;&#45;menu nav&#45;&#45;principal" role="navigation">
-        <ul class="nav__list">
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../accueil/m16.html">Anticoste</a></li>
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../rose-des-vents/m16.html">Rose&#8239;des&#8239;vents</a></li>
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../credits/m16.html">Crédits</a></li>
-        </ul>
-    </nav>
-</header>
-<main class="conteneur rangee">
-    <section class="texte__contenu cols_9_de_12">
-        <blockquote>
-            <p>Dès sept heures du matin, le Napoléon III mouillait par le travers de la pointe ouest de l’Anticosti, et le vent de terre nous apportait le bruit de la canonnade par laquelle le gardien de phare, M. Malouin, saluait notre arrivée. Toutes les habitations du poste étaient pavoisées de drapeaux et de banderoles en signe de réjouissance…
-            </p>
-        </blockquote>
-        <p class="texte__infos">
-            Faucher de Saint-Maurice. <cite>De tribord à d’abord, trois croisières dans le golfe Saint-Laurent,</cite> Montréal, Duvernay Frères et Dansereau, 1877, page 110
-        </p>
-    </section>
-</main>
-
-&lt;!&ndash; voir gabarit interface.html pour pied de page incluant navigation et pagination &ndash;&gt;
-<footer role="contentinfo">
-    <nav class="nav nav__pagination nav&#45;&#45;menu" role="navigation">
-        <ul class="nav__list">
-            <li class="nav__listItem">
-                <a class="nav__link switch"
-                   href="../recit-3/iii-01-m16.html">
-                    <span aria-hidden="true">&lt;</span>
-                    <span class="screen-reader-only">Précédent</span></a>
-            </li>
-            <li class="nav__listItem">
-                <span class="pagination">Récit I - page 4 de 14</span>
-            </li>
-            <li class="nav__listItem">
-                <a class="nav__link switch"
-                   href="../recit-3/iii-05-m16.html">
-                    <span class="screen-reader-only">Suivant</span>
-                    <span aria-hidden="true">&gt;</span></a>
-            </li>
-        </ul>
-    </nav>
-</footer>
-</body>
-</html>-->

@@ -1,34 +1,43 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers:
+*/
+
 @charset "UTF-8";
 
 /**
- * @author Olivier Roy <2066237@csfoy.ca>
+ * @author Olivier Roy, Manon Trubert <2066237@csfoy.ca mtrubert.news@gmail.com>
  *
  * TABLE DES MATIERES
- * Typographie
- ******* Setup typo
- * Styles de base et reset normalize
- * Grille de mise en page
  * Variables  & Font sizes, family, weight, line-height, etc.
- ******* Utilitaires + navigation entete
- ******* Éléments de design graphiques
- *** Niveau 1 - Accueil
- ******* Grid
- ******* Grid names
- *** Niveau 1 - Rose des vents
- *** Niveau 1 - Crédits
- *** Niveau 2 - Gabarit page Titre
- *** Niveau 2 - Gabarit pages Photo et texte
- ******* Background pages photo et texte
- ******* Navigation contenu
- ******* Contenu
+ * MOBILE
+ * DESKTOP
+ * Typographie
+ * Styles de base,  basic reset  & reset normalize
+ * Grille de mise en page
+ * Utilitaires + navigation entete
+ * Éléments de design graphiques
+ * Niveau 1 - Accueil
+ * Grid
+ * Grid names
+ * Bouton CTA "Lancer l'exposition"
+ * Niveau 1 - Rose des vents
+ * Niveau 1 - Crédits
+ * Niveau 2 - Gabarit page Titre
+ * Niveau 2 - Gabarit pages Photo et texte
+ * Background pages photo et texte
+ * Navigation contenu
+ * Contenu
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
-/* Variables  & Font sizes, family, weight, line-height, etc.   !!!!!! MOBILE FIRST !!!!!!
+/* Variables  & Font sizes, family, weight, line-height, etc.
    ========================================================================== */
 :root {
-    /*  Colors */
+
     --color-main: #0f242f;
     /* bleu foncé*/
     --color-secondary1: #FFB703;
@@ -47,13 +56,13 @@
 
     /*  MOBILE */
 
-    /*  Font sizes mobile*/
     --font-size-logo: 3rem;
 
     --font-size-h1: 3rem;
     --font-size-h2: 2rem;
     --font-size-h3: 1.8rem;
     --font-size-h3-credits: 2.4rem;
+
 
     --font-size-p: 1.4rem;
     --font-size-p-credits: 1.5rem;
@@ -66,7 +75,6 @@
     --font-size-nav-footer-actif: 3.2rem;
 
 
-    /*  Height & width  mobile (SVG) */
     --height-elements: 45px;
     --width-elements: 45px;
     --height-elements-nav: 60px;
@@ -77,7 +85,6 @@
 @media (min-width: 600px) {
     :root {
 
-        /*  Height & width desktop*/
         --height-elements: 60px;
         --width-elements: 60px;
         --height-elements-nav: 100px;
@@ -102,10 +109,10 @@
         --font-size-nav-footer-actif: 3.6rem;
     }
 }
+
 /* Typographie
    ========================================================================== */
 
-/*  Setup typo */
 .h1 {
     font-size: var(--font-size-h1);
     color: var(--color-text1);
@@ -115,6 +122,7 @@
     font-size: var(--font-size-h2);
     color: var(--color-text3);
 }
+
 .h2-credits {
     font-size: var(--font-size-h2);
     color: var(--color-text1);
@@ -124,9 +132,11 @@
     font-size: var(--font-size-h3);
     color: var(--color-text1);
 }
-.h3-credits{
+
+.h3-credits {
     color: var(--color-text1);
 }
+
 strong {
     font-weight: bold;
 }
@@ -137,21 +147,24 @@ strong {
     color: var(--color-text1);
 }
 
-.p-credits{
-    color:var(--color-text1);
+.p-credits {
+    color: var(--color-text1);
     font-size: var(--font-size-p-credits);
 }
-@media(min-width: 600px){
-    .p-credits{
-        color:var(--color-text1);
+
+@media (min-width: 600px) {
+    .p-credits {
+        color: var(--color-text1);
         font-size: var(--font-size-p-credits);
     }
 }
-.p-accent{
+
+.p-accent {
     font-size: var(--font-size-p);
-color: var(--color-text3);
+    color: var(--color-text3);
 
 }
+
 a {
     text-decoration: none;
     color: var(--color-text1);
@@ -177,12 +190,22 @@ a:hover {
     font-size: var(--font-size-texte-contenu);
     color: var(--color-text1);
 }
-@media(min-width: 600px) {
-    .texte__infos {
-        font-size: 2rem;
 
+cite,
+.texte__infos {
+    font-size: var(--font-size-texte-contenu);
+}
+
+time {
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    time {
+        font-size: 1.5rem;
     }
 }
+
 .recit-pagination {
     font-size: var(--font-size-recit-pagination);
     color: var(--color-text1);
@@ -200,27 +223,25 @@ a:hover {
     text-align: center;
 }
 
-p {
-    margin: 3em 0;
-}
-@media(max-width: 599px) {
+
+@media (max-width: 599px) {
     .logo {
         text-align: center;
     }
 }
-@media (min-width: 600px) {
-    p {
-        margin: 0;
-    }
-    .logo {
-        margin: 0;
-    }
+
+p {
+    margin: 0;
 }
+
+.logo {
+    margin: 0;
+}
+
 
 /* Styles de base,  basic reset  & reset normalize
    ========================================================================== */
-/* @import "normalize.css"; */
-/* @import "utilitaires.css"; */
+
 
 * {
     padding: 0;
@@ -233,14 +254,12 @@ p {
 
 /* Grille de mise en page
    ========================================================================== */
-/* @import "grille.css"; */
 
 
-    body {
-        margin: 0;
+body {
+    margin: 0;
 
-    }
-
+}
 
 
 /* Utilitaires + navigation entete */
@@ -259,16 +278,19 @@ header {
     padding-right: 4em;
 }
 
-nav {
+.nav__principal {
     display: flex;
     justify-content: space-between;
+    justify-items: stretch;
 
 }
+
 .nav--footer {
     font-size: var(--font-size-nav-footer);
     color: var(--color-text1);
     text-align: left;
 }
+
 .nav--link-actif {
     color: var(--color-text3);
     font-size: var(--font-size-nav-footer-actif);
@@ -295,9 +317,10 @@ li {
 
 }
 
-.footer-accueil .logo{
+.footer-accueil .logo {
     padding: 0 0 .5em 0;
 }
+
 .footer-flex {
     display: flex;
     justify-content: center;
@@ -305,7 +328,6 @@ li {
     flex-direction: column;
 
 }
-
 
 
 @media (min-width: 600px) {
@@ -317,13 +339,15 @@ li {
         flex-direction: row;
 
     }
+
     .footer-accueil {
         max-width: 1000px;
         margin: 10vh auto;
         text-align: left;
 
     }
-    .footer-accueil .logo{
+
+    .footer-accueil .logo {
         padding: 0;
         margin-bottom: 1em;
     }
@@ -339,8 +363,6 @@ li {
 }
 
 
-
-
 /*  Éléments de design graphiques */
 
 .compass {
@@ -348,17 +370,17 @@ li {
     width: var(--width-elements);
     height: var(--height-elements);
 }
-@media(max-width: 599px) {
-    .compass:hover {
-        width: var(--width-elements);
-        height: var(--height-elements);
-        fill: #FB8500;
-    }
+
+.compass:hover {
+    width: var(--width-elements);
+    height: var(--height-elements);
+    fill: #FB8500;
 }
+
 /* Niveau 1 - Accueil
    ====================== */
 
-.bg-accueil{
+.bg-accueil {
     background: url(/images/m20/vii-header-m20.jpg) no-repeat scroll;
     background-position: top;
     background-size: 100vw;
@@ -388,7 +410,6 @@ li {
     }
 
     /*  Grid names */
-
     .grid-a {
         grid-area: a;
         margin-top: 20vh;
@@ -406,7 +427,6 @@ li {
     .grid-c {
         display: block;
         grid-area: c;
-        /* transform: translate(0%, -50%); */
 
     }
 
@@ -443,8 +463,72 @@ li {
     }
 
 }
+@media (min-width: 600px){
+    .grid-a {
 
-.accueil{
+        -ms-grid-row: 1;
+
+        -ms-grid-column: 3;
+
+        -ms-grid-column-span: 7
+
+    }
+    .grid-b {
+
+        -ms-grid-row: 3;
+
+        -ms-grid-column: 3;
+
+        -ms-grid-column-span: 5
+
+    }
+    .grid-c {
+
+        -ms-grid-row: 5;
+
+        -ms-grid-column: 5
+
+    }
+    .grid-d {
+
+        -ms-grid-row: 7;
+
+        -ms-grid-column: 5;
+
+        -ms-grid-column-span: 5
+
+    }
+    .grid-e {
+
+        -ms-grid-row: 7;
+
+        -ms-grid-column: 1;
+
+        -ms-grid-column-span: 3
+
+    }
+    .grid-f {
+
+        -ms-grid-row: 9;
+
+        -ms-grid-column: 1;
+
+        -ms-grid-column-span: 5
+
+    }
+    .grid-g {
+
+        -ms-grid-row: 9;
+
+        -ms-grid-column: 7;
+
+        -ms-grid-column-span: 3
+
+    }
+}
+
+.accueil,
+.rose-des-vents {
     background-color: var(--color-main);
 }
 
@@ -463,15 +547,14 @@ li {
     margin: 0;
 }
 
-    img{
-        max-width: 100%;
-    }
-
+img {
+    max-width: 100%;
+}
 
 
 @media (min-width: 600px) {
     .section1 {
-        padding: 0 ;
+        padding: 0;
         display: grid;
     }
 }
@@ -533,97 +616,150 @@ li {
 
 /* Niveau 1 - Rose des vents
    ====================== */
+.nav__list__rose {
+    padding-top: 200px;
+}
+
+@media (min-width: 600px) {
+    .img_rose {
+        padding-top: 200px;
+    }
+}
 
 
 /* Niveau 1 - Crédits
    ====================== */
 
 .h2-credits,
-.h3-credits{
+.h3-credits {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.credits{
+
+.credits {
     padding: 20px;
 }
-.h2-credits{
+
+.h2-credits {
     text-align: center;
 }
 
-.p-centre{
+.p-centre {
     text-align: center;
 }
-@media(min-width: 600px) {
+
+@media (min-width: 600px) {
 
     .h2-credits,
-    .h3-credits{
+    .h3-credits {
         padding-top: 40px;
         padding-bottom: 40px;
     }
-    .credits{
+
+    .credits {
         padding: 30px;
     }
 
 }
-    @media(min-width: 600px){
-        .grid{
-            column-count: 2;
-        }
-        .p-grid{
-            padding: 8px;
-        }
+
+@media (min-width: 600px) {
+    .grid {
+        column-count: 2;
     }
+
+    .p-grid {
+        padding: 8px;
+    }
+}
+
 /* Niveau 2 - Gabarit page Titre
    ====================== */
-.contenu_titre{
+.contenu_titre {
     display: block;
     text-align: center;
 }
-h1{
+
+h1 {
     text-align: center;
 }
-.video__tag{
+
+.video__tag {
     max-width: 95%;
     margin: auto;
 }
+
 /* Niveau 2 - Gabarit pages Photo et texte
    ====================== */
-    .contenu-texte{
-        padding: 50px;
-        display: block;
-        text-align: center;
-    }
-    .texte-contenu{
-        padding-top: 60px;
-        padding-bottom: 20px;
-    }
-
-    img {
-        max-width: 80%;
-    }
-figure{
+.contenu-texte {
+    padding: 50px;
+    display: block;
     text-align: center;
 }
-    .picture__tag {
-        margin: auto;
+
+.texte-contenu {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+    .texte-contenu {
+        padding-top: 140px;
     }
+}
+
+@media (max-width: 599px) {
+
+    img {
+        padding-top: 50px;
+    }
+}
+
+img {
+    max-width: 80%;
+}
+
+figure {
+    text-align: center;
+}
+
+.picture__tag {
+    margin: auto;
+}
+
+@media (max-width: 599px) {
+    .arrow-left {
+        padding-top: 150px;
+    }
+
+    .arrow-right {
+        padding-top: 150px;
+    }
+}
+
 /* Background pages photo et texte */
 .main-img-txt {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
 
+@media (min-width: 600px) {
+    .main-img-txt {
+        align-items: center;
+    }
+}
+
 .bg-img-txt {
     background: url(../images/m20/vii-img-m20.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 
+}
+
+.texte__infos:hover {
+    background-color: white;
 }
 
 /*  Navigation contenu */
@@ -640,7 +776,7 @@ figure{
 }
 
 .arrow:hover {
-    fill: #FB8500;
+    fill: #d3dee7;
 }
 
 /*  Contenu */
@@ -649,7 +785,6 @@ figure{
     margin: auto;
     width: 100vh;
     height: 70vh;
-    /* background-color: #FB8500; */
     display: flex;
     justify-content: center;
     align-items: center;
