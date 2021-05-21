@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
 /**
@@ -23,7 +30,11 @@
 h1 {
     font-family: Cormorant Garamond;
     font-size: 27px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-transform: uppercase;
     color: #fff;
@@ -53,7 +64,12 @@ blockquote {
 /* Base mise en page
    ========================================================================== */
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     min-height: 100vh;
 }
@@ -92,8 +108,14 @@ header {
 
 /* navigations menu principal*/
 .nav--menu .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 0;
 }
@@ -133,41 +155,6 @@ header {
     font-size: smaller;
 }
 
-/* Bouton Rose des Vents */
-#rose{
-    width:50px;
-    animation: pulse 3s infinite ease-in-out;
-}
-@keyframes pulse {
-    from {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-
-    50% {
-        -webkit-transform: scale3d(1.1, 1.1, 1.1);
-        transform: scale3d(1.1, 1.1, 1.1);
-    }
-
-    to {
-        -webkit-transform: scale3d(1, 1, 1);
-        transform: scale3d(1, 1, 1);
-    }
-}
-
-#branche_oblique_bd:hover path,
-circle:hover,
-#branche_verticale_bas:hover path,
-#branche_oblique_hd:hover path,
-#branche_oblique_bg:hover path,
-#branche_horizontale_droite:hover path,
-#branche_horizontale_gauche:hover path,
-#branche_verticale_haut:hover path,
-#branche_oblique_hg:hover path
-{
-    fill: #D4AC0D;
-}
-
 /* Niveau 1 - Accueil
    ================== */
 .accueil  main {
@@ -175,88 +162,183 @@ circle:hover,
     color: #fff;
 }
 
-.accueil main .anticoste {
-    /*width: 60%;*/
-    /*margin-left: 40%;*/
+.accueil .anticoste img {
+    float: none;
 }
-.accueil  .anticoste img {
-    margin-left: -25%;
-    float: left;
-    margin-right: 2rem;
+@media (min-width: 600px) {
+    .accueil .anticoste img {
+        margin-left: -25%;
+        float: left;
+        margin-right: 2rem;
+    }
 }
-
 .accueil .anticoste p {
-    width: 60%;
-    margin-left: 40%;
+    width: 95%;
+    margin-left: 2.5%;
     margin-top: 0;
     color: #888988;
 }
 
 .accueil h1 {
-    width: 60%;
-    margin-left: 40%;
-    text-align: left;
-    justify-content: flex-start;
-    font-size: 9rem;
+    width: 95%;
+    margin-left: 2.5%;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 8rem;
     line-height: 9rem;
 }
 
+@media (min-width: 600px) {
+    .accueil .anticoste p {
+        width: 60%;
+        margin-left: 40%;
+    }
+
+    .accueil h1 {
+        width: 60%;
+        margin-left: 40%;
+        text-align: left;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        font-size: 9rem;
+        line-height: 9rem;
+    }
+}
+
+
+
 .accueil .h3 {
-    font-size: 13rem;
-    line-height: 7rem;
+    font-size: 8rem;
+    line-height: 4rem;
     color: rgba(167, 147, 41, 0.2);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
 }
-
 .accueil .terre-maudite {
     margin-top: 7rem;
-    margin-left: -20%;
+    margin-left: 0;
+    text-align: center;
 }
 
 .accueil .paradis {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    margin-right: -20%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-right: 0;
     margin-bottom: 7rem;
 }
 
+@media (min-width: 600px) {
+    .accueil .h3 {
+        font-size: 13rem;
+        line-height: 7rem;
+        text-align: left;
+    }
+    .accueil .terre-maudite {
+        margin-left: -20%;
+    }
+
+    .accueil .paradis {
+        margin-right: -20%;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+    }
+}
+
+
 .accueil .sept-recits-numeriques {
-    width: 60%;
-    margin-left: 20%;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .accueil .sept-recits-numeriques {
+        width: 60%;
+        margin-left: 20%;
+    }
 }
 
 .accueil .sept-recits-numeriques p {
     color: #888988;
+    padding-left: 2.5%;
 }
 
 .accueil h2 {
+    width: 95%;
+    padding-left: 2.5%;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 4.5rem;
-    line-height: 5rem;
+    font-size: 4rem;
+    line-height: 4.5rem;
     text-transform: uppercase;
     margin: 0;
+    text-align: center;
+}
+
+@media (min-width: 600px){
+    .accueil .sept-recits-numeriques p {
+        padding-left: 0;
+    }
+
+    .accueil h2 {
+        width: 100%;
+        padding-left: 0;
+        font-size: 4.5rem;
+        line-height: 5rem;
+        text-align: left;
+    }
 }
 
 .accueil .sept-recits {
     margin-top: 7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    text-align: center;
 }
 .accueil .mythiques {
     margin-bottom: 7rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    margin-left: -13%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 0;
+}
+
+@media (min-width: 600px) {
+    .accueil .sept-recits {
+        text-align: left;
+    }
+
+    .accueil .mythiques {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        margin-left: -13%;
+    }
 }
 
 .accueil .experience-immersive ul {
+    width: 60%;
+    margin-left: 20%;
     list-style-type: none;
-    margin: 0;
+    margin-right: 0;
+    margin-top: 0;
     margin-bottom: 4rem;
     padding: 0;
+    color: #888988;
 }
 
 .accueil .experience-immersive ul li {
@@ -264,6 +346,14 @@ circle:hover,
     padding: 2rem;
     padding-left: 0;
     margin: 0;
+}
+
+@media (min-width: 600px) {
+    .accueil .experience-immersive ul {
+        padding: 0;
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 .accueil footer {
@@ -305,43 +395,72 @@ circle:hover,
     font-weight: 700;
 }
 
+
 .nav--recits picture {
     position: absolute;
-    width: 65%;
+    width: 200%;
     z-index: -1;
-    margin-top: 0;
+    margin-top: 20rem;
+    margin-left: -20%;
+}
+@media (min-width: 600px) {
+    .nav--recits picture {
+        width: 65%;
+        margin-top: 0;
+    }
 }
 
 .nav--recits .nav__link {
-    color: #c8a78c;
     text-decoration: none;
     font-size: 3.5rem;
-    line-height: 6.5rem;
+    line-height: 4rem;
+    color: #fff;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+@media (min-width: 600px) {
+    .nav--recits .nav__link {
+
+        text-align: left;
+        line-height: 6.5rem;
+    }
 }
 
 .nav--recits .nav__list {
-    width: 55%;
-    margin-left: 45%;
-    margin-top: 15rem;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20rem;
 }
-@media (min-width: 600px) {
-    .nav--recits .nav__link {
-        color: #fff;
-        text-align: left;
+@media (min-width: 600px){
+    .nav--recits .nav__list {
+        width: 55%;
+        margin-left: 45%;
     }
 }
+
 .nav--recits .nav__link:hover {
     color: #E2C52E;
 }
 
-.nav--recits .recit2, .nav--recits .recit7 {
-    margin-left: 10%;
-}
-.nav--recits .recit3, .nav--recits .recit6 {
-    margin-left: 20%;
-}
-.nav--recits .recit4, .nav--recits .recit5 {
-    margin-left: 25%;
+@media (min-width: 600px) {
+    .nav--recits .recit2, .nav--recits .recit7 {
+        margin-left: 10%;
+    }
+
+    .nav--recits .recit3, .nav--recits .recit6 {
+        margin-left: 20%;
+    }
+
+    .nav--recits .recit4, .nav--recits .recit5 {
+        margin-left: 25%;
+    }
 }
 
 
@@ -350,17 +469,34 @@ circle:hover,
 .credits main {
     background-image: url("../images/m22/iii-credits-m22_2x.jpg");
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 300%;
     background-position: center;
-    margin-top: 10%;
+    margin-top: 20rem;
     margin-bottom: 10%;
     padding: 2rem;
     padding-left: 5rem;
 }
 
+@media (min-width: 600px) {
+    .credits main {
+        background-size: 150%;
+        margin-top: 10%;
+    }
+}
+
 .credits h1 {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
-    font-size: 4.8rem;
+    font-size: 4.3rem;
+    margin-top: -8rem;
+}
+
+@media (min-width: 600px) {
+    .credits h1 {
+        margin-top: 0;
+        font-size: 4.8rem;
+    }
 }
 
 .credits h2 {
@@ -373,25 +509,38 @@ circle:hover,
     margin-top: 1.5rem;
 }
 
+
 .credits p {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 0;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
+}
+@media (min-width: 600px) {
+    .credits p {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
 }
 
 .credits ul li {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 0;
-    line-height: 2.2rem;
+    line-height: 2.5rem;
     text-decoration: none;
     list-style-type: none;
 
+}
+@media (min-width: 600px) {
+    .credits ul li {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
 }
 
 .credits ul {
@@ -404,15 +553,27 @@ circle:hover,
 }
 
 .credits .logo {
-    margin-left: 70%;
-    margin-top: -10%;
+    margin-left: 25%;
+    margin-top: 5rem;
+}
+@media (min-width: 600px) {
+    .credits .logo {
+        margin-left: 70%;
+        margin-top: -10%;
+    }
 }
 
 /* Niveau 2 - Gabarit page Titre
    ========================================================================== */
 .titre .rangee {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -432,12 +593,23 @@ circle:hover,
 
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
+
+
 .photo img {
-    width: 80%;
+    width: 100%;
     display: block;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 10%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 30%;
+}
+
+@media (min-width: 600px) {
+    .photo img{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10%;
+    }
 }
 
 figure {
@@ -445,17 +617,14 @@ figure {
     margin: 0;
 }
 
-.photo figure {
-    /*margin-bottom: 10rem;*/
-}
 
 .photo figcaption {
     color: aliceblue;
     background-color: rgba(136, 137, 136, 0.85);
     padding: 2rem;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 @media (min-width: 600px) {
@@ -464,10 +633,14 @@ figure {
         width: 80%;
         bottom: 0;
         opacity: 0;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .photo figcaption:hover {
         opacity: 0.85;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s;
         cursor: help;
     }
@@ -493,37 +666,51 @@ figcaption p {
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
 .texte {
-    background-image: url("../demo-recit/images/i-txt-m99_600.jpg");
+    background-image: url("../images/m22/iii-txt-m22.jpg");
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 200%;
     background-position: center;
-    margin-top: 20%;
+    margin-top: 14rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 0;
-}
-.texte__contenu blockquote p {
-    font-family: 'Open Sans', sans-serif;
-    margin-left: 40%;
-    margin-right: 5%;
-    margin-top: 15%;
-    font-size: 1.7rem;
 }
 
 @media (min-width: 600px) {
     .texte {
-        background-image: url("../demo-recit/images/i-txt-m99_1000.jpg");
+        background-size: 80%;
+        margin-top: 7rem;
     }
 }
+.texte__contenu blockquote p {
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 40%;
+    margin-bottom: 16rem;
+    font-size: 1.7rem;
+    color: #fff;
+}
 
-@media (min-width: 1000px) {
-    .texte {
-        background-image: url("../demo-recit/images/i-txt-m99_2000.jpg");
+@media (min-width: 600px) {
+    .texte__contenu blockquote p {
+        margin-bottom: 10%;
+        margin-left: 40%;
+        margin-right: 15%;
+        margin-top: 20%;
     }
 }
 
 .texte .rangee {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: #000;
     padding: 0;
@@ -533,12 +720,22 @@ figcaption p {
     color: aliceblue;
     background-color: rgba(136, 137, 136, 0.85);
     padding: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 15%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    /*margin-top: %;*/
     margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+    .texte__infos {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }
 
 .texte__infos h2 {
@@ -568,6 +765,8 @@ figcaption p {
 
     .texte__infos:hover {
         opacity: 0.85;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s;
         cursor: help;
     }
