@@ -32,9 +32,9 @@
     --color-text: #fff;
     --color-Y: #101c3d;
     --color-button: #1a3375;
-    --font-family1: Merriweather , sans-serif;
+    --font-family1: Merriweather, sans-serif;
     --font-family2: Source Sans Pro, sans-serif;
-    }
+}
 
 h1,
 .h1,
@@ -177,9 +177,11 @@ body {
     /*background-color: aliceblue;*/
     background-image: url("../images/m03/texture.png")
 }
+
 small {
     align-content: center;
 }
+
 blockquote {
     margin: 0;
 }
@@ -215,15 +217,8 @@ main.conteneur {
 }
 
 .m03__accueil header {
-    background-color:var(--color-Y);
+    background-color: var(--color-Y);
     min-height: 155px;
-}
-
-@media (min-width: 601px) {
-    .m03__accueil header {
-
-        min-height: 200px
-    }
 }
 
 @media (min-width: 601px) {
@@ -241,13 +236,15 @@ main.conteneur {
     padding-top: 2rem;
     font-size: 2.4rem;
 }
-@media(min-width: 601px){
-    .h1_cimetiere{
+
+@media (min-width: 601px) {
+    .h1_cimetiere {
         font-size: 3rem;
     }
 }
-@media(min-width: 801px){
-    .h1_cimetiere{
+
+@media (min-width: 801px) {
+    .h1_cimetiere {
         font-size: 4rem;
     }
 }
@@ -257,40 +254,8 @@ main.conteneur {
         background-color: var(--color-Y);
         height: 140px;
         padding-top: 4rem;
-
     }
 }
-
-.footer_index {
-    display: flex;
-    flex-direction: row;
-}
-
-.footer_index--video {
-    top: 330px;
-    position: absolute;
-
-}
-
-@media (min-width: 601px) {
-    .footer_index--video {
-        top: 77rem;
-    }
-}
-
-@media (min-width: 601px) {
-    .m03__accueil header {
-
-        min-height: 230px;
-
-    }
-}
-
-footer {
-    color: aliceblue;
-    z-index: 5;
-}
-
 
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
@@ -336,14 +301,12 @@ header .nav__listItem {
     }
 }
 
-@media (min-width: 601px) {
-    .nav__list--footer .nav__listItem {
-        margin: 0 8rem 0 7rem;
-        /*padding-bottom: 3rem;*/
-    }
+.nav--menu .nav__link:hover {
+    text-decoration: underline;
+
 }
 
-.nav--menu .nav__link:hover {
+.nav--menu .nav__link:focus {
     text-decoration: underline;
 }
 
@@ -351,21 +314,13 @@ header .nav__listItem {
     transform: scale(2.25);
     text-decoration: none;
     transition: all 0.3s;
+
 }
 
-/*.nav--menu .nav__link--active {*/
-/*    color: #ecf4f8;*/
-/*    border-bottom: 5px solid #ecf4f8;*/
-/*    border-top-left-radius: 20px;*/
-/*    border-top-right-radius: 20px;*/
-/*    background: rgb(236, 244, 248);*/
-/*    !* tests et code du dégradé faits avec https://cssgradient.io/ *!*/
-/*    background: linear-gradient(0deg, rgba(236, 244, 248, 1) 0%, rgba(157, 177, 194, 1) 3%, rgba(67, 67, 67, 1) 30%);*/
-/*    !*background-color: #434343;*!*/
-/*}*/
-
-ul .nav__list {
-    position: relative;
+.nav--menu .switch:focus {
+    transform: scale(2.25);
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
 .svg__immersive {
@@ -377,23 +332,10 @@ ul .nav__list {
 
     text-align: center;
 }
-/*.nav__listItem--icone{*/
-
-/*    fill:#FFFFFF;*/
-/*    width: 45px;*/
-/*    height: 45px;*/
-/*}*/
-@media (min-width: 601px) {
-    .nav__listItem--pagination {
-        /*padding:0 16rem 10rem 16rem;*/
-    }
-}
-
 
 /*Niveau 1 - Accueil
 ======================*/
 .anticoste_accueil {
-
     text-align: center;
 }
 
@@ -403,25 +345,27 @@ ul .nav__list {
         padding: 0 1rem;
     }
 }
-@media(min-width: 601px)
-{
-    .h2_septRecits,
-    .h2_immersive{
-        padding: 0 2rem;
 
+@media (min-width: 601px) {
+    .h2_septRecits,
+    .h2_immersive {
+        padding: 0 2rem;
     }
 }
+
 @media (max-width: 600px) {
     .h2_exposition {
-        color: white;
+        color: var(--color-text);
         padding: 0 1rem 0 1rem;
     }
 }
-@media(min-width: 601px) {
+
+@media (min-width: 601px) {
     .h2_exposition {
         padding: 0 2rem 0 2rem;
     }
 }
+
 @media (min-width: 601px) {
     .h2_exposition,
     .p_exposition,
@@ -430,10 +374,10 @@ ul .nav__list {
         /*margin: 10px;*/
     }
 }
+
 @media (max-width: 600px) {
     .p2 {
         color: var(--color-text);
-        /*padding: 0 0 3rem 0;*/
     }
 }
 
@@ -443,7 +387,8 @@ ul .nav__list {
 
     }
 }
-@media(max-width: 600px) {
+
+@media (max-width: 600px) {
     .p1,
     .p2,
     .p3,
@@ -452,7 +397,8 @@ ul .nav__list {
         padding: 0 1rem;
     }
 }
-@media(min-width: 601px) {
+
+@media (min-width: 601px) {
     .p1,
     .p2,
     .p3,
@@ -461,7 +407,6 @@ ul .nav__list {
         padding: 0 2rem;
     }
 }
-
 
 .bleed {
     background-color: var(--color-Y);
@@ -479,16 +424,7 @@ ul .nav__list {
 @media (min-width: 601px) {
     .cols_6_de_12 {
         margin: 0;
-        padding-top: 6rem;
-    }
-}
-
-/* Ajout experience immersive
-=================================================*/
-@media (min-width: 601px) {
-    .experienceImmersive {
-        padding-left: 3rem;
-        top:0;
+        padding-top: 4rem;
     }
 }
 
@@ -497,12 +433,12 @@ ul .nav__list {
     font-weight: bold;
     margin: 0 1rem;
 }
-@media(min-width: 601px){
-    .kbd{
-        margin:0 2rem;
+
+@media (min-width: 601px) {
+    .kbd {
+        margin: 0 2rem;
     }
 }
-
 
 .dt {
     font-size: 2rem;
@@ -512,47 +448,29 @@ ul .nav__list {
     background-color: var(--color-button);
     color: var(--color-text);
     max-width: 100px;
-    margin:1rem 0 2rem 0;
-
-
+    margin: 1rem 0 2rem 0;
 }
 
 .cmd {
-
     padding-left: 1.4rem
 }
 
 .f11 {
     padding-left: 1.5rem;
-
 }
 
 @media (min-width: 601px) {
     .cols_6_de_12 {
         width: 100%;
-
     }
 }
 
-.button {
-    background-color: var(--color-button);
-    max-width: 400px;
-    color: var(--color-text);
-    /*padding: 1rem 1.4rem;*/
-    /*margin: 4rem 0 2rem 2rem;*/
-    justify-content: center;
-
-}
 
 /*Niveau 1 - Crédits
 ======================*/
 
-.header_credits {
-    background-color: var(--color-Y);
-    padding-top: 2rem;
-}
-
 .m03__credits header {
+    background-color: var(--color-Y);
     padding-top: 2rem;
 }
 
@@ -570,10 +488,8 @@ ul .nav__list {
     }
 }
 
-
 p {
     color: black;
-
 }
 
 p.credits_bold {
@@ -585,6 +501,7 @@ p.credits_bold {
     padding: 1rem;
     color: black;
 }
+
 .credits_bloc_1 p {
     color: black;
 }
@@ -598,11 +515,12 @@ p.credits_bold {
 .credits_bloc_2 p {
     color: black;
 }
+
 .footer_credits .logo {
     float: right;
     margin-right: 8rem;
-
 }
+
 /* Niveau 1 - Rose des vents
    ================== */
 .body_rose {
@@ -617,6 +535,10 @@ p.credits_bold {
         background-repeat: no-repeat;
         background-size: cover;
     }
+}
+
+.header_credits {
+    background-color: var(--color-Y);
 }
 
 .nav--recits .cols_5_de_12 {
@@ -690,7 +612,7 @@ p.credits_bold {
     }
 }
 
-    /* navigation vers les récits */
+/* navigation vers les récits */
 .nav--recits {
     font-family: 'Merriweather', sans-serif;
     font-weight: bold;
@@ -709,14 +631,6 @@ p.credits_bold {
     justify-content: center;
     min-height: 60vh;
 }
-
-/*@media (min-width: 600px) {*/
-/*    .nav--recits .nav__list {*/
-/*        min-height: auto;*/
-/*        padding-left: 0;*/
-/*        margin-right: 2%;*/
-/*    }*/
-/*}*/
 
 .nav--recits picture {
     position: absolute;
@@ -739,17 +653,19 @@ p.credits_bold {
     font-size: 1.4rem;
     min-width: 30rem;
     line-height: 3rem;
+    padding-right: 4rem;
 }
 
 .nav--recits .nav__link:hover {
     text-decoration: underline;
     color: #101c3d; /* la dominante dans la main */
     font-size: 2.15rem;
-    background-image: url("../images/m99/main.png");
+    background-image: url("../images/m03/pointe_fleche.svg");
     background-position: right;
     background-size: 3.5rem;
     background-repeat: no-repeat;
     transition: font-size 0.3s;
+
 }
 
 /* Niveau 2 - Gabarit page Titre
@@ -758,33 +674,13 @@ p.credits_bold {
     background-color: var(--color-Y);
 }
 
-.titre .rangee {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.titre h1 {
-    font-size: 5vh;
-    padding-top: 3rem;
-}
-
-@media (min-width: 601px) {
-    .titre h1 {
-        font-size: 10vh;
-        padding: 0;
-    }
-}
-
 .conteneur__rangee {
     min-height: 90vh;
-    /*min-width: 375px;*/
 }
 
 .video__tag {
     position: absolute;
     top: 100px;
-    /*left: 25px;*/
     max-width: 90%;
     margin-left: 2rem;
     z-index: -1;
@@ -794,7 +690,6 @@ p.credits_bold {
 @media (min-width: 601px) {
     .video__tag {
         top: 100px;
-        left: -0.05rem;
         margin-left: 7rem;
     }
 }
@@ -802,9 +697,18 @@ p.credits_bold {
 .svg {
     min-width: 40px;
     min-height: 40px;
+
 }
-@media(min-width: 601px){
-    .svg{
+
+.svg:hover {
+    min-width: 40px;
+    min-height: 40px;
+    fill: #ee9005;
+}
+
+
+@media (min-width: 601px) {
+    .svg {
         min-width: 60px;
         min-height: 60px;
     }
