@@ -123,6 +123,7 @@ footer {
     display: flex;
     justify-content: center;
     margin:0;
+    align-items: center;
 }
 
 .nav--menu .nav__link {
