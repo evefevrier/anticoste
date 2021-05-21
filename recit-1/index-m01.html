@@ -16,11 +16,19 @@
     <meta name="author" content="Richard Baillargeon">
     <!-- Adapter le titre -->
     <title>Telle une grande baleine - Anticoste - m01</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/m01/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/m01/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/m01/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../images/m01/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../images/m01/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
     <!-- Feuille de styles commune à tous -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Ajuster le href pour pointer sur la feuille de styles
     du mandat en changeant le suffixe m01 -->
-    <link rel="stylesheet" href="../css/styles-m01.css">
+    <!--    <link rel="stylesheet" href="../css/styles-m01.css">-->
+    <link rel="stylesheet" href="../css/styles-m01.min.css">
 </head>
 <!-- sur <body>: classe titre + nom de classe pour correspondre à votre mandat m01 à m13 -->
 <body class="titre m01">
@@ -30,40 +38,47 @@
     <nav class="nav nav--menu" role="navigation">
         <ul class="nav__list">
             <li class="nav__listItem">
-                <a class="nav__link"
+                <a class="nav-titre__link"
                    href="../accueil/m01.html">Anticoste</a></li>
-<!--            <li class="nav__listItem">-->
-<!--                <a class="nav__link"-->
-<!--                   href="../rose-des-vents/m01.html">Rose&#8239;des&#8239;vents</a></li>-->
             <li class="nav__listItem">
-                <a class="nav__link"
+                <a class="nav-titre__link"
                    href="../rose-des-vents/m01.html"><span class="rose-des-vents-nav"></span></a></li>
             <li class="nav__listItem">
-                <a class="nav__link"
+                <a class="nav-titre__link"
                    href="../credits/m01.html">À propos</a></li>
         </ul>
     </nav>
 </header>
 
 <main class="conteneur rangee">
-<!--titre du récit-->
-<h1>Telle une grande baleine</h1>
-<!--integration d'une animation vidéo-->
-<video class="video__tag" autoplay loop muted preload="metadata">
-    <source src="../images/m01/test.mp4" type="video/mp4">
-    Votre navigateur ne prends pas en charge la balise video.
-</video>
+    <!--titre du récit-->
+    <h1>Telle une grande baleine</h1>
+    <!--integration d'une animation vidéo-->
+    <video class="video__tag" autoplay loop muted preload="metadata">
+        <source src="../images/m01/intro.mp4" type="video/mp4">
+        Votre navigateur ne prends pas en charge la balise video.
+    </video>
 </main>
 
 <!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
 <footer role="contentinfo">
     <nav class="nav nav--menu" role="navigation">
-        <ul class="nav__list">
+        <ul class="nav-fleches__list">
             <li class="nav__listItem">
                 <a class="nav__link switch"
                    href="../rose-des-vents/m01.html">
-                    <span aria-hidden="true">&lt;</span>
-                    <span class="screen-reader-only">Précédent</span></a>
+                    <span aria-hidden="true">
+                        <svg class="btnFleches" width="50" height="50" viewBox="0 0 65 65" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle class="btnFleches-cercle" cx="32.5" cy="32.5" r="31" stroke="#846437"
+                                    stroke-width="3"/>
+                            <path class="btnFleches-fleche"
+                                  d="M16.5858 31.5858C15.8047 32.3668 15.8047 33.6332 16.5858 34.4142L29.3137 47.1421C30.0948 47.9232 31.3611 47.9232 32.1421 47.1421C32.9232 46.3611 32.9232 45.0948 32.1421 44.3137L20.8284 33L32.1421 21.6863C32.9232 20.9052 32.9232 19.6389 32.1421 18.8579C31.3611 18.0768 30.0948 18.0768 29.3137 18.8579L16.5858 31.5858ZM48 31L18 31L18 35L48 35L48 31Z"
+                                  fill="#846437"/>
+                        </svg>
+                    </span>
+                    <span class="screen-reader-only">Précédent</span>
+                </a>
             </li>
             <li class="nav__listItem">
                 <span class="pagination">Récit I</span>
@@ -72,7 +87,17 @@
                 <a class="nav__link switch"
                    href="../recit-1/i-01-m01.html">
                     <span class="screen-reader-only">Suivant</span>
-                    <span aria-hidden="true">&gt;</span></a>
+                    <span aria-hidden="true">
+                        <svg class="btnFleches" width="50" height="50" viewBox="0 0 65 65" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle class="btnFleches-cercle" cx="32.5" cy="32.5" r="31" stroke="#846437"
+                                    stroke-width="3"/>
+                            <path class="btnFleches-fleche"
+                                  d="M49.4142 34.4142C50.1953 33.6332 50.1953 32.3668 49.4142 31.5858L36.6863 18.8579C35.9052 18.0768 34.6389 18.0768 33.8579 18.8579C33.0768 19.6389 33.0768 20.9052 33.8579 21.6863L45.1716 33L33.8579 44.3137C33.0768 45.0948 33.0768 46.3611 33.8579 47.1421C34.6389 47.9232 35.9052 47.9232 36.6863 47.1421L49.4142 34.4142ZM18 35L48 35L48 31L18 31L18 35Z"
+                                  fill="#846437"/>
+                        </svg>
+                    </span>
+                </a>
             </li>
         </ul>
     </nav>

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @charset "UTF-8";
 
 /**
@@ -11,55 +18,66 @@
  *** Niveau 1 - Accueil
  *** Niveau 1 - Rose des vents
  ****** navigation vers les récits
- *** Niveau 1 - Crédits
+ *** Niveau 1 - À propos
  *** Niveau 2 - Gabarit page Titre
  *** Niveau 2 - Gabarit page Photo
  *** Niveau 2 - Gabarit page Texte
- *** Page d'accueil
  */
 
 /* Charte typographique
    ========================================================================== */
 @import url("../css/typo.css");
+
 /* Styles de base
    ========================================================================== */
-body{
+body {
     color: #000;
     background-color: #F2EFE8;
 }
-blockquote{
-    margin:0;
+
+blockquote {
+    margin: 0;
 }
 
 /* Grille de mise en page
    ========================================================================== */
-body{
+body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow:column wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
     min-height: 100vh;
 }
-main.conteneur{
+
+main.conteneur {
     min-height: 80vh;
     min-width: 375px;
 }
+
 header,
 footer {
     color: aliceblue;
-    background-color: rgba(50,50,50,0);
+    background-color: rgba(50, 50, 50, 0);
     /*position: fixed;*/
     width: 100%;
     z-index: 5;
 }
+
 footer {
     bottom: 0;
 }
-header{
+
+header {
     top: 0;
 }
+
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
 /* commun aux différentes navigations - balises nav>ul.nav__list */
-.nav__list {
+.nav__list, .nav-fleches__list {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
@@ -67,13 +85,47 @@ header{
 
 /* navigations menu principal*/
 .nav--menu .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    margin:0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0;
+}
+
+.nav--menu .nav-fleches__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
 }
 
 .nav--menu .nav__link {
     color: black;
+    /*display: inline-block;*/
+    padding: 1rem 1rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Libre Franklin', sans-serif;
+    border-bottom: 5px solid transparent;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav--menu .nav-titre__link {
+    color: white;
     display: inline-block;
     padding: 1rem 1rem;
     text-decoration: none;
@@ -81,26 +133,34 @@ header{
     font-family: 'Libre Franklin', sans-serif;
     border-bottom: 5px solid transparent;
 }
+
+.nav--menu .nav__link:hover,
+.nav--menu .nav-titre__link:hover {
+    text-decoration: underline;
+}
+
 @media (min-width: 600px) {
-    .nav--menu .nav__link {
+    .nav--menu .nav__link,
+    .nav--menu .nav-titre__link {
         font-size: 1.6rem;
         margin: 0 2rem;
     }
 }
-.nav--menu .nav__link:hover {
-    text-decoration: underline;
-}
+
 .nav--menu .switch {
     color: #846437;
 }
+
 .nav--menu .switch:hover {
-    transform: scale(2.25);
-    text-decoration: none;
-    transition: all 0.3s;
+    /*transform: scale(2.25);*/
+    /*text-decoration: none;*/
+    /*transition: all 0.3s;*/
+    color: #998B77;
 }
+
 .nav--menu .nav__link--active {
     /*color:#ecf4f8;*/
-    color:#000;
+    color: #000;
     text-decoration: underline;
     /*border-bottom: 5px solid #ecf4f8;*/
     /*border-top-left-radius: 20px;*/
@@ -110,9 +170,10 @@ header{
     /*background: linear-gradient(0deg, rgba(236,244,248,1) 0%, rgba(157,177,194,1) 3%, rgba(67,67,67,1) 30%);*/
     /*background-color: #434343;*/
 }
-.pagination{
+
+.pagination {
     display: inline-block;
-    margin:1rem;
+    margin: 1rem;
 }
 
 .rose-des-vents-nav {
@@ -127,30 +188,50 @@ header{
 /* Niveau 1 - Rose des vents
    ================== */
 .rose-des-vents {
-    background-image: url("../images/m01/carte.jpg");
+    background-image: url("../images/m01/carte_1440.jpg");
     background-size: cover;
 }
-.rose-des-vents .conteneur{
-    padding-top:70px;
+
+.rose-des-vents .conteneur {
+    padding-top: 70px;
 }
+
+.rose-des-vents-image {
+    z-index: -1;
+}
+
 /* navigation vers les récits */
 .nav--recits {
     font-family: 'Libre Franklin', sans-serif;
     font-weight: bold;
 }
+
 @media (min-width: 600px) {
     .nav--recits {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 }
+
 .nav--recits .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
     flex-flow: column nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding-left: 13%;
     min-height: 60vh;
 }
+
 @media (min-width: 600px) {
     .nav--recits .nav__list {
         min-height: auto;
@@ -192,7 +273,17 @@ header{
     background-position: right;
     background-size: 3.5rem;
     background-repeat: no-repeat;
+    -webkit-transition: font-size 0.3s;
+    -o-transition: font-size 0.3s;
     transition: font-size 0.3s;
+}
+
+.btnFleches:hover .btnFleches-cercle {
+    stroke: #998B77;
+}
+
+.btnFleches:hover .btnFleches-fleche {
+    fill: #998B77;
 }
 
 /* Niveau 2 - Gabarit page Titre
@@ -201,57 +292,82 @@ header{
     background: #A4947D;
 }
 
-.titre .rangee{
+.titre .rangee {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
-.titre h1{
-    font-size:5vh;
+
+.titre h1 {
+    font-size: 5vh;
     padding-top: 5rem;
     color: #FFFFFF;
 }
+
+.titre footer {
+    background: rgba(0, 0, 0, 0);
+}
+
 @media (min-width: 600px) {
-    .titre h1{
-        font-size:10vh;
+    .titre h1 {
+        font-size: 10vh;
         padding: 0;
     }
 }
 
 .video__tag {
-    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1;
 }
+
 /* Niveau 2 - Gabarit page Photo
    ========================================================================== */
-.photo img{
+.photo img {
     /*max-width: 90%;*/
 }
-figure{
+
+figure {
     position: relative;
-    margin:0;
+    margin: 0;
 }
-.photo figure{
-    margin-bottom:10rem;
+
+.photo figure {
+    margin-bottom: 1rem;
 }
+
 .photo figcaption {
     color: aliceblue;
     background-color: #434343;
     padding: 2rem;
 }
+
+.photo footer {
+    background: rgba(0, 0, 0, 0);
+    color: black;
+}
+
 @media (min-width: 600px) {
     .photo figcaption {
         position: absolute;
-        width:100%;
-        bottom:0;
-        opacity:0;
+        width: 100%;
+        bottom: 0;
+        opacity: 0;
     }
+
     .photo figcaption:hover {
-        opacity:0.85;
+        opacity: 0.85;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s;
         cursor: help;
     }
@@ -259,44 +375,61 @@ figure{
 
 /* Niveau 2 - Gabarit page Texte
    ========================================================================== */
-.texte{
+.texte {
     background-image: url("../recit-1/images/i-txt-m01.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-.texte .rangee{
+
+.texte .rangee {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-    color:#000;
+    color: #000;
 }
-.texte__contenu{
+
+.texte__contenu {
     padding: 70px 2rem;
-    font-size:1.8rem;
+    font-size: 1.8rem;
 }
+
+.texte footer {
+    background: rgba(0, 0, 0, 0);
+    color: black;
+}
+
 @media (min-width: 600px) {
-    .texte__contenu{
-        font-size:2.1rem;
+    .texte__contenu {
+        font-size: 2.1rem;
     }
 }
-.texte__infos{
+
+.texte__infos {
     color: aliceblue;
     background-color: #434343;
     font-size: 1.6rem;
     padding: 1rem;
 }
+
 @media (min-width: 600px) {
-    .texte__infos{
+    .texte__infos {
         color: transparent;
-        background-color:transparent;
+        background-color: transparent;
         cursor: help;
     }
-    .texte__infos:hover{
+
+    .texte__infos:hover {
         color: black;
-        transition:color 0.5s;
+        -webkit-transition: color 0.5s;
+        -o-transition: color 0.5s;
+        transition: color 0.5s;
     }
 }
 
-/* Page d'accueil
+/* Niveau 1 - Accueil
    ========================================================================== */
 h1 {
     font-family: 'Libre Franklin', sans-serif;
@@ -305,6 +438,28 @@ h1 {
 .sept-recits-description {
     background: #000;
     color: #FFF;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.sept-recits-description a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.sept-recits-description a:hover {
+    text-decoration: underline;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
 }
 
 footer {
@@ -317,7 +472,8 @@ footer {
     text-align: center;
 }
 
-
+/* Niveau 1 - À propos
+   ========================================================================== */
 .credits {
     background-image: url('../images/m01/bg_credit_2400.jpg');
     background-repeat: no-repeat;
