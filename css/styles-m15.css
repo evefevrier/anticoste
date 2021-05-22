@@ -20,9 +20,118 @@
 @import url(utilitaires.css);
 @import url(grille.css);
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+.cormorantgaramond-bold-luxor-gold-144px {
+    color: var(--luxor-gold);
+    font-family: var(--font-family-cormorant_garamond);
+    font-size: var(--font-size-xxxl);
+    font-weight: 700;
+    font-style: normal;
+}
+.opensans-bold-nobel-24px {
+    color: var(--nobel);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-s);
+    font-weight: 700;
+    font-style: normal;
+}
+.cormorantgaramond-bold-white-48px {
+    color: var(--white);
+    font-family: var(--font-family-cormorant_garamond);
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: normal;
+}
+@media (min-width: 600px){
+    .cormorantgaramond-bold-white-48px {
+        font-size: 3rem;
+    }
+}
+@media (min-width: 800px) {
+    .cormorantgaramond-bold-white-48px {
+        font-size: var(--font-size-xl)
+    }
+}
+.opensans-bold-saffron-25px {
+    color: var(--saffron);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-m);
+    font-weight: 700;
+    font-style: normal;
+}
+.opensans-normal-suva-gray-25px {
+    color: var(--suva-gray);
+    font-family: var(--font-family-open_sans);
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: normal;
+}
+@media(min-width: 600px){
+    .opensans-normal-suva-gray-25px {
+        font-size: 1.8rem;
+    }
+}
 
+@media (min-width: 1000px) {
+    .opensans-normal-suva-gray-25px {
+        color: var(--suva-gray);
+        font-family: var(--font-family-open_sans);
+        font-size: var(--font-size-m);
+        font-weight: 400;
+        font-style: normal;
+    }
+}
+.opensans-bold-saffron-24px {
+    color: var(--saffron);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-s);
+    font-weight: 700;
+    font-style: normal;
+}
+.opensans-bold-suva-gray-25px {
+    color: var(--suva-gray);
+    font-family: var(--font-family-open_sans);
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-style: normal;
+}
+@media(min-width: 600px){
+    .opensans-bold-suva-gray-25px {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    .opensans-bold-suva-gray-25px {
+        font-size: var(--font-size-m);
+    }
+}
 
 :root {
+    --cape-cod:
+            rgba(65, 65, 65, 1);
+    --suva-gray:
+            rgba(136, 137, 136, 1);
+    --luxor-gold:
+            rgba(167, 147, 41, 0.2);
+    --nobel:
+            rgba(181, 181, 181, 1);
+    --saffron:
+            rgba(226, 197, 46, 1);
+    --white:
+            rgba(255, 255, 255, 1);
+
+    --font-size-xs: 16px;
+    --font-size-s: 24px;
+    --font-size-m: 25px;
+    --font-size-l: 41px;
+    --font-size-xl: 48px;
+    --font-size-xxl: 96px;
+    --font-size-xxxl: 144px;
+
+    --font-family-cormorant_garamond: "Cormorant Garamond";
+    --font-family-open_sans: "Open Sans";
+
+
     /** Démo variables [m99] **/
     /* les caractères */
     --m15-fonte-principale: 'Open Sans', sans-serif;
@@ -106,6 +215,7 @@ h1,
 h2,
 .h2 { /* = 30px */
     font-size: 3rem;
+    color: #ffffff;
 }
 @media (min-width: 600px) {
     h2,
@@ -141,12 +251,15 @@ h3,
 
 h4,
 .h4 { /* = 16px */
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
+    line-height: 1.7rem;
 }
 @media (min-width: 600px) {
     h4,
     .h4 { /* = 18px */
         font-size: 1.8rem;
+        line-height: 1.9rem;
     }
 }
 
@@ -154,7 +267,12 @@ h4,
     h4,
     .h4 { /* = 22px */
         font-size: 2.2rem;
+        line-height: 2.1rem;
     }
+}
+h5,
+.h5{
+
 }
 
 /* Styles de base
@@ -183,21 +301,21 @@ header,
 footer {
     color: #ffffff;
     background-color: #1D1D1D;
-    position: fixed;
     width: 100%;
     z-index: 5;
 }
 footer {
-    bottom: -2rem;
+    bottom: -30rem;
 }
 header{
-    top: 100px;
+    margin-top: 90px;
     background-color: rgba(48, 48, 48, 0.8);
 
 }
 /* Navigations de l'interface (bandeau + pied)
    ========================================================================== */
 /* commun aux différentes navigations - balises nav>ul.nav__list */
+
 .nav__list {
     list-style: none;
     margin-left: 0;
@@ -245,6 +363,30 @@ header{
     /* tests et code du dégradé faits avec https://cssgradient.io/ */
     /*background: linear-gradient(0deg, rgba(236,244,248,1) 0%, rgba(157,177,194,1) 3%, rgba(67,67,67,1) 30%);*/
     /*background-color: #434343;*/
+}
+.nav__footer{
+    display: flex;
+    justify-content: center;
+    margin:0;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+}
+.nav__footer .nav__link{
+    text-decoration: none;
+    color: aliceblue;
+}
+.nav__footer .nav__link:hover{
+    color: var(--m15-couleur-lumiere);
+}
+.nav__footer .switch:hover {
+    transform: scale(2.25);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.nav__footer .nav__link--active {
+
+    color: var(--m15-couleur-lumiere);
 }
 .pagination{
     display: inline-block;
@@ -365,10 +507,11 @@ header{
     align-items: center;
 }
 .titre h1{
+    color: var(--m15-couleur-lumiere);
     font-size:5vh;
     padding-top: 5rem;
 }
-@media (min-width: 600px) {
+@media (min-width: 700px) {
     .titre h1{
         font-size:10vh;
         padding: 0;
@@ -450,4 +593,519 @@ figure{
         transition:color 0.5s;
         background-color: rgba(136, 137, 136, 0.6);
     }
+}
+/*page credits*/
+.credits{
+    background-image: url("../images/m15/ii-00C-m15_2400.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+@media (min-width: 1200px) {
+    .credits {
+        background-size: contain;
+    }
+}
+.credits__contenu{
+    padding: 175px 4rem;
+    color: #b6b6b6;
+    line-height: 17px;
+    font-size: var(--m15-fontSize-interface-small);
+
+}
+@media(min-width: 700px){
+    .credits__contenu{
+        line-height: 21px;
+        font-size: var(--m15-fontSize-interface-large);
+
+    }
+}
+.picture__logoQC img{
+    max-width: 60%;
+}
+
+/*page acceuil*/
+
+.accueil .anticoste-1 {
+    color: var(--white);
+    font-family: var(--font-family-cormorant_garamond);
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+@media (min-width: 600px){
+    .accueil .anticoste-1 {
+        font-size: 7rem;
+    }
+}
+@media (min-width: 900px){
+    .accueil .anticoste-1 {
+        font-size: var(--font-size-xxl);
+        margin-left: 382.0px;
+        min-height: 92px;
+        min-width: 539px;
+        mix-blend-mode: normal;
+        width: 539px;
+    }
+}
+.accueil .copyright {
+    color: var(--white);
+    font-family: var(--font-family-open_sans);
+    font-size: var(--font-size-xs);
+    line-height: 21px;
+    margin-left: 2.0px;
+    margin-top: 46px;
+    min-height: 23px;
+    min-width: 662px;
+    mix-blend-mode: normal;
+    text-align: center;
+    white-space: nowrap;
+    width: 662px;
+}
+@media (max-width: 600px){
+    .accueil .copyright {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-align: center;
+    }
+}
+.accueil .experience {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+@media (){
+    .accueil .experience {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 95px;
+        min-height: 1017px;
+        width: 1440px;
+    }
+}
+.accueil .flex-row {
+    align-items: flex-start;
+    align-self: flex-start;
+    display: flex;
+    margin-left: 3px;
+    margin-top: 20px;
+    min-width: 1222px;
+}
+/*.accueil .group {*/
+/*    align-items: flex-start;*/
+/*    display: flex;*/
+/*    height: 17px;*/
+/*    margin-left: 0.02px;*/
+/*    min-width: 44px;*/
+/*}*/
+.accueil .group-1 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-height: 44px;
+    width: 44px;
+}
+.accueil .group-10 {
+    align-items: flex-start;
+    display: flex;
+    height: 188px;
+    left: 0;
+    min-width: 188px;
+    position: absolute;
+    top: 0;
+}
+.accueil .group-12 {
+    align-items: flex-start;
+    display: flex;
+    height: 88px;
+    left: 0;
+    min-width: 88px;
+    position: absolute;
+    top: 0;
+}
+.accueil .group-13 {
+    align-items: flex-start;
+    display: flex;
+    height: 17px;
+    margin-left: 0;
+    margin-top: 10px;
+    min-width: 44px;
+}
+.accueil .group-14 {
+    align-items: flex-start;
+    display: flex;
+    height: 114px;
+    left: 0;
+    min-width: 114px;
+    position: absolute;
+    top: 0;
+}
+.accueil .group-15 {
+    align-items: flex-start;
+    display: flex;
+    height: 188px;
+    left: 19px;
+    min-width: 188px;
+    position: absolute;
+    top: 19px;
+}
+.accueil .group-16 {
+    align-items: flex-start;
+    display: flex;
+    height: 17px;
+    justify-content: flex-end;
+    margin-left: 0;
+    min-width: 44px;
+}
+.accueil .group-17 {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    margin-left: 91px;
+    min-width: 60px;
+}
+.accueil .group-18 {
+    align-items: flex-start;
+    background-image: url(vector-39.svg);
+    background-size: 100% 100%;
+    display: flex;
+    height: 88px;
+    left: 1px;
+    min-width: 88px;
+    position: absolute;
+    top: 1px;
+}
+.accueil .group-19 {
+    align-items: flex-start;
+    display: flex;
+    height: 17px;
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-top: 10px;
+    min-width: 44px;
+}
+.accueil .group-2 {
+    align-items: flex-start;
+    display: flex;
+    height: 60px;
+    left: 0;
+    min-width: 235px;
+    position: absolute;
+    top: 0;
+}
+.accueil .group-3 {
+    align-items: flex-start;
+    display: flex;
+    height: 60px;
+    left: 0;
+    min-width: 237px;
+    position: absolute;
+    top: 0;
+}
+.accueil .group-4 {
+    align-items: flex-start;
+    display: flex;
+    height: 80px;
+    margin-left: 109px;
+    margin-top: 3px;
+    min-width: 321px;
+}
+.accueil .group-5 {
+    align-items: flex-start;
+    background-image: url(vector-11.svg);
+    background-size: 100% 100%;
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    min-width: 60px;
+    padding: 17.0px 9.8px;
+}
+.accueil .group-6 {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+    min-width: 60px;
+}
+.accueil .group-7 {
+    align-items: flex-start;
+    background-image: url(vector-21.svg);
+    background-size: 100% 100%;
+    display: flex;
+    height: 114px;
+    left: 1px;
+    min-width: 114px;
+    position: absolute;
+    top: 1px;
+}
+.accueil .group-8 {
+    align-items: flex-end;
+    background-image: url(vector-17.svg);
+    background-size: 100% 100%;
+    display: flex;
+    height: 88px;
+    justify-content: flex-end;
+    left: 13px;
+    min-width: 88px;
+    padding: 4.7px 4.8px;
+    position: absolute;
+    top: 13px;
+}
+.accueil .group-9 {
+    align-items: flex-end;
+    background-image: url(vector-35.svg);
+    background-size: 100% 100%;
+    display: flex;
+    height: 68px;
+    justify-content: flex-end;
+    left: 10px;
+    min-width: 68px;
+    padding: 3.8px 3.8px;
+    position: absolute;
+    top: 10px;
+}
+.accueil .image01intro {
+    height: 300px;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    width: 880px;
+}
+.accueil .image027recits {
+    height: 263px;
+    margin-left: 221.0px;
+    margin-top: 20px;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    width: 660px;
+}
+.accueil .image03experience {
+    height: 380px;
+    mix-blend-mode: normal;
+    object-fit: cover;
+    width: 2400px;
+    display: flex;
+}
+
+.accueil .intro {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: -10px;
+    min-height: 973px;
+    width: 1453px;
+}
+.accueil .ligne-dev {
+    height: 10px;
+    left: 16px;
+    position: absolute;
+    top: 127px;
+    width: 795px;
+}
+.accueil .ligne-footer {
+    height: 6px;
+    width: 100%;
+    display: flex;
+}
+.accueil .ligne-intro {
+    height: 10px;
+    left: 650px;
+    position: absolute;
+    top: 128px;
+    width: 795px;
+}
+.accueil .menu {
+    align-items: flex-start;
+    display: flex;
+    min-width: 1440px;
+}
+.accueil .mythiques {
+    left: 0;
+    letter-spacing: 0;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 76px;
+    width: 836px;
+}
+.accueil .nav {
+    align-items: flex-start;
+    display: flex;
+    height: 33px;
+    margin-left: 4.0px;
+    margin-top: 63px;
+    min-width: 494px;
+}
+.accueil .overlap-group {
+    height: 219px;
+    margin-top: 103px;
+    position: relative;
+    width: 1442px;
+}
+.accueil .overlap-group1 {
+    height: 2969px;
+    margin-left: -19px;
+    margin-top: 101px;
+    position: relative;
+    width: 1459px;
+}
+.accueil .overlap-group2 {
+    height: 60px;
+    position: relative;
+    width: 237px;
+}
+.accueil .overlap-group2-1 {
+    align-items: flex-start;
+    background-image: url(vector-13.svg);
+    background-size: 100% 100%;
+    display: flex;
+    height: 60px;
+    margin-top: -0.02px;
+    min-width: 61px;
+    padding: 17.0px 10.0px;
+}
+.accueil .overlap-group2-2 {
+    height: 221px;
+    margin-right: 7.5px;
+    margin-top: 20px;
+    position: relative;
+    width: 1446px;
+}
+.accueil .overlap-group2-3 {
+    height: 89px;
+    margin-top: -0.72px;
+    position: relative;
+    width: 89px;
+}
+.accueil .overlap-group2-4 {
+    height: 207px;
+    margin-left: -18px;
+    margin-top: -18.51px;
+    position: relative;
+    width: 207px;
+}
+.accueil .overlap-group2-5 {
+    align-items: center;
+    background-color: rgba(48, 48, 48, 0.8);
+    display: flex;
+    flex-direction: column;
+    min-height: 219px;
+    padding: 1.0px 0;
+    width: 100%;
+}
+.accueil .overlap-group3-3 {
+    height: 223px;
+    margin-right: 6.0px;
+    margin-top: 21px;
+    position: relative;
+    width: 1251px;
+}
+.accueil .place {
+    left: 826px;
+    letter-spacing: 0;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 74px;
+    width: 614px;
+}
+
+.accueil .sept-rcits {
+    left: 393px;
+    letter-spacing: 0;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 0;
+    width: 858px;
+}
+.accueil .terre-maudite {
+    left: 0;
+    letter-spacing: 0;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 0;
+    width: 1225px;
+}
+.accueil .texte-intro01 {
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-left: 20px;
+    min-height: 300px;
+    mix-blend-mode: normal;
+    width: 322px;
+}
+.accueil .texte-intro02 {
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-left: 421.0px;
+    margin-top: 20px;
+    min-height: 300px;
+    min-width: 578px;
+    mix-blend-mode: normal;
+    width: 578px;
+}
+.accueil .texte7-recits {
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-left: 223.0px;
+    margin-top: 20px;
+    min-height: 177px;
+    min-width: 662px;
+    mix-blend-mode: normal;
+    width: 662px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.accueil .texteexperience {
+    align-items: center;
+    margin-top: 34px;
+    width: 440px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+@media (min-width: 600px){
+    .accueil .texteexperience {
+        align-items: center;
+        margin-top: 34px;
+        width: 440px;
+    }
+}
+@media (min-width: 1000px){
+    .accueil .texteexperience {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        margin-right: 253.7px;
+        margin-top: 34px;
+        min-height: 603px;
+        width: 746px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.accueil .titreexperience {
+    letter-spacing: 0;
+    min-height: 47px;
+    mix-blend-mode: normal;
+}
+.accueil .x7recits {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 113px;
+    min-height: 771px;
+    width: 100%;
+}
+
+.container-center-horizontal {
+    pointer-events: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.container-center-horizontal > * {
+    pointer-events: auto;
+    flex-shrink: 0;
 }
