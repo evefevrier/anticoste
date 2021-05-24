@@ -3,66 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- Adapter le titre -->
-    <title>Le Grand Chatelain -Page 17 a 32 -M23<</title>
+    <title>Rose des vents - Anticoste - m23</title>
     <!-- Feuille de styles commune à tous -->
     <link rel="stylesheet" href="../css/styles.css">
     <!-- Ajuster le href pour pointer sur la feuille de styles
-    du mandat en changeant le suffixe m99 -->
+    du mandat en changeant le suffixe m20 -->
     <link rel="stylesheet" href="../css/styles-m23.css">
 </head>
-<!-- sur <body>: classe texte + nom de classe pour correspondre à votre mandat m01 à m13 -->
-<body class="texte m23">
-
-<!-- voir gabarit interface.html pour bandeau d'entête incluant menu principal-->
+<!-- Ajuster le nom de classe m20 pour correspondre à votre mandat m01 à m13 -->
+<body class="rose-des-vents m23">
+<!-- Bandeau d'entête et menu principal-->
 <header role="banner">
-    <nav class="nav nav--menu nav--principal" role="navigation">
-        <ul class="nav__list">
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../accueil/m23.html">Anticoste</a></li>
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../rose-des-vents/m23.html">Rose&#8239;des&#8239;vents</a></li>
-            <li class="nav__listItem">
-                <a class="nav__link"
-                   href="../credits/m23.html">Crédits</a></li>
+    <nav role="navigation">
+        <ul class="nav__principal">
+            <li>
+                <a href="../accueil/m23.html">
+                    <p class="logo">Anticoste</p>
+                </a>
+            </li>
+            <li><a href="../credits/m23.html"><svg class="compass" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                <path
+                        d="M3.86826 27.207L0.0764771 26.4575C2.50994 13.4058 13.4015 2.51265 26.4527 0.0775146L27.2028 3.86917C15.6615 6.02202 6.01957 15.6654 3.86826 27.207Z"
+                        fill="" />
+                <path
+                        d="M62.1317 27.2068C59.9801 15.6629 50.3348 6.0185 38.791 3.86771L39.5401 0.0759277C52.5946 2.50874 63.4895 13.4031 65.9234 26.4573L62.1317 27.2068Z"
+                        fill="" />
+                <path
+                        d="M39.5404 65.924L38.7912 62.1322C50.3345 59.9815 59.9792 50.3381 62.1315 38.7952L65.9232 39.545C63.4886 52.5982 52.5938 63.4914 39.5404 65.924Z"
+                        fill="" />
+                <path
+                        d="M26.4527 65.9227C13.4022 63.4877 2.51101 52.5956 0.0769043 39.545L3.86856 38.7952C6.02064 50.3359 15.6622 59.9783 27.2029 62.131L26.4527 65.9227Z"
+                        fill="" />
+                <path d="M49.6081 23.7878L52.4517 13.5428L42.2021 16.3884L43.9718 22.0148L49.6081 23.7878Z"
+                      fill="" />
+                <path d="M49.6116 42.2021L43.985 43.9717L42.212 49.6081L52.457 52.4517L49.6116 42.2021Z"
+                      fill="" />
+                <path d="M23.7878 16.3918L13.5428 13.5482L16.3884 23.7978L22.0148 22.0282L23.7878 16.3918Z"
+                      fill="" />
+                <path d="M16.3919 42.2122L13.5483 52.4572L23.7979 49.6118L22.0283 43.9852L16.3919 42.2122Z"
+                      fill="" />
+                <path
+                        d="M33 30.9387C31.8634 30.9387 30.9386 31.8635 30.9386 33.0001C31.0518 35.7348 34.9485 35.734 35.0613 33.0001C35.0613 31.8635 34.1365 30.9387 33 30.9387Z"
+                        fill="" />
+                <path
+                        d="M40.8894 25.0972L32.996 0L25.0972 25.1107L0 33.004L25.1107 40.9028L33.004 66L40.9028 40.8893L66 32.996L40.8894 25.0972ZM33 38.9265C29.7322 38.9265 27.0735 36.2678 27.0735 33C27.3991 25.1378 38.6021 25.1401 38.9265 33C38.9265 36.2678 36.2678 38.9265 33 38.9265Z"
+                        fill="" />
+            </svg>
+            </a></li>
         </ul>
     </nav>
 </header>
-<main class="conteneur rangee">
-    <section class="texte__contenu cols_9_de_12">
-        <blockquote>
-            <p>La baie Ste-Claire, par ses mœurs, a l’air d’un coin détaché de la vieille et classique Arcadie; on y vit doucement, dans l’intimité, dans le calme, dans le bonheur. Le petit village a l’air d’une grande famille où tout le monde s’aime et se respecte. Ansi, le jour, M. Comettant dirige tous les employés et est leur supérieur; le soir, il devient chef de fanfare et d’orphéon.
-            </p>
-        </blockquote>
-        <p class="texte__infos">
-            Tiré d’un article du journal La Patrie, <cite>Samedi 15 juillet 1899 et cité par Monseigneur Charles Guay</cite> Lettres sur l'île d'Anticosti à l'Honorable Marc-Aurèle Plamondon,Montréal, C.O. Beauchemin & fils libraires-imprimeurs, 1902, page 275
-        </p>
-    </section>
-</main>
+<main class="conteneur">
 
-<!-- voir gabarit interface.html pour pied de page incluant navigation et pagination -->
-<footer role="contentinfo">
-    <nav class="nav nav--menu" role="navigation">
-        <ul class="nav__list">
+    <nav class="nav--recits">
+        <ul class="nav__list cols_5_de_12">
             <li class="nav__listItem">
-                <a class="nav__link switch"
-                   href="../rose-des-vents/m23.html">
-                    <span aria-hidden="true">&lt</span>
-                    <span class="screen-reader-only">Précédent</span></a>
+                <!--            <a class="nav__link" href="../recit-1/index-m01.html">-->
+                <a class="nav__link" href="../recit-2/index-m15.html">
+                    Gardien de lumière
+                </a>
             </li>
             <li class="nav__listItem">
-                <span class="pagination">Récit 4 - page 18 de 32</span>
+                <!--            <a class="nav__link" href="../recit-2/index-m02.html">-->
+                <a class="nav__link" href="../recit-6/index-m19.html">
+                    Sont venus chercher
+                </a>
             </li>
             <li class="nav__listItem">
-                <a class="nav__link switch"
-                   href="../recit-4/iv-18-m23.html">
-                    <span class="screen-reader-only">Suivant</span>
-                    <span aria-hidden="true">&gt</span></a>
+                <!--            <a class="nav__link" href="../recit-3/index-m03.html">-->
+                <a class="nav__link" href="../recit-3/index-m16.html">
+                    Cimetière du golfe
+                </a>
+            </li>
+            <li class="nav__listItem">
+                <a class="nav__link" href="../recit-1/index-m14.html">
+                    Telle une grande baleine
+                </a>
             </li>
         </ul>
+        <ul class="nav__list cols_5_de_12">
+            <li class="nav__listItem">
+                <!--            <a class="nav__link" href="../recit-5/index-m05.html">-->
+                <a class="nav__link" href="../recit-7/index-m20.html">
+                    Des pas et des prises
+                </a>
+            </li>
+            <li class="nav__listItem">
+                <!--            <a class="nav__link" href="../recit-6/index-m06.html">-->
+                <a class="nav__link" href="../recit-5/index-m18.html">
+                    Nés sur le reef
+                </a>
+            </li>
+            <li class="nav__listItem">
+                <a class="nav__link" href="../credits/m23.html">
+                    Crédits
+                </a>
+
+            </li>
+            <li class="nav__listItem">
+                <a class="nav__link" href="../recit-4/index-m14.html">
+                    Le grand châtelain
+                </a>
+            </li>
+        </ul>
+
+        <picture class="nav--recits__picture">
+            <source srcset="../images/m23/rosevents.png"/>
+            <img src="../images/m23/rosevents.png" alt="Rose des vents">
+        </picture>
     </nav>
-</footer>
+</main>
 </body>
 </html>
