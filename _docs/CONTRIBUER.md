@@ -10,7 +10,7 @@ developp-b | Développement groupe 2
 ## Débuter le travail
 (1) Fourcher le répertoire https://github.com/evefevrier/anticoste.git  
 (2) Cloner la fourche https://github.com/*UTILISATEUR*/anticoste.git  
-(3) Définir localement les serveurs distants (voir explications ci-dessous)
+(3) Définir localement les serveurs distants (voir explications ci-dessous)  
 (4) Créer les fichiers personnels selon nomenclature et procédure (voir Annexe fournie en classe)
 
 ## Définir les serveurs distants
